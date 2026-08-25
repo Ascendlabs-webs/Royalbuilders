@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Premium Project Gallery - Royal Group</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#574500",
+                        "surface-container-low": "#f5f3f3",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "surface": "#fbf9f8",
+                        "primary": "#000000",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#3b4859",
+                        "error": "#ba1a1a",
+                        "background": "#fbf9f8",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#44474c",
+                        "on-background": "#1b1c1c",
+                        "inverse-surface": "#303030",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "on-secondary-container": "#745c00",
+                        "secondary-container": "#fed65b",
+                        "primary-fixed-dim": "#bac7dc",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dbd9d9",
+                        "secondary-fixed-dim": "#e9c349",
+                        "primary-container": "#0f1c2c",
+                        "surface-container": "#efeded",
+                        "on-tertiary-fixed": "#191c1d",
+                        "on-primary-fixed": "#0f1c2c",
+                        "tertiary-fixed": "#e1e3e4",
+                        "surface-container-high": "#eae8e7",
+                        "outline": "#75777d",
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary-container": "#828485",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "inverse-primary": "#bac7dc",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-primary-container": "#778598",
+                        "outline-variant": "#c4c6cc",
+                        "secondary": "#735c00",
+                        "surface-bright": "#fbf9f8",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#000000",
+                        "secondary-fixed": "#ffe088",
+                        "surface-tint": "#525f71",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-variant": "#e4e2e2",
+                        "primary-fixed": "#d6e3f9",
+                        "tertiary-container": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "button": ["Montserrat"],
+                        "body-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #fbf9f8; color: #1b1c1c; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .gold-glow:hover { box-shadow: 0 0 40px rgba(212, 175, 55, 0.15); transition: box-shadow 0.3s ease; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .text-link-hover { position: relative; display: inline-block; }
+        .text-link-hover::after { content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px; bottom: -2px; left: 0; background-color: #d4af37; transform-origin: bottom right; transition: transform 0.25s ease-out; }
+        .text-link-hover:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+    </style>
+</head>
+<body class="antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="hidden md:flex bg-surface/80 dark:bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-primary/10 dark:border-primary-fixed/10 shadow-sm">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20 w-full">
+<div class="flex items-center gap-4">
+<img alt="Royal Group" class="h-12 w-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc0Ps9hBCmVC5UpaiDd-2eOLi4gOGfAWNaDqCF7rON60b5GvjxlEYl7aXWzVnAl3saq6OQxpAsafP-tMtvWuHHgW2tiOjBJYoTJIvlFE5ATPGoK9gCg6cxaMISjXV1MBXAbqXMIEXs9oIaxk8ZvwqNWiqsUmeylgCBm3VahPqHSR4D30pYt1ESICW82AlQqvoYvMwRG2ojbwRKaOKSE-UEcwp41dTYWfCoC4LvMaGin9A_alP7gxea"/>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Royal Group</span>
+</div>
+<div class="flex items-center gap-8 font-button text-button uppercase tracking-wider">
+<a class="text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Construction</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Interiors</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Real Estate</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Maintenance</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-button text-button uppercase tracking-wider text-on-surface hover:text-secondary transition-colors duration-300">Login</button>
+<button class="bg-primary text-on-primary font-button text-button uppercase tracking-wider px-6 py-3 rounded-none hover:bg-secondary-fixed hover:text-primary transition-colors duration-300">Contact Us</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<div class="md:hidden flex flex-col h-full p-4 fixed inset-y-0 left-0 w-64 z-[60] bg-surface dark:bg-surface-container-highest shadow-2xl translate-x-[-100%] transition-transform" id="mobile-nav">
+<div class="mb-8">
+<img alt="Royal Group Logo" class="h-16 w-16 mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc0Ps9hBCmVC5UpaiDd-2eOLi4gOGfAWNaDqCF7rON60b5GvjxlEYl7aXWzVnAl3saq6OQxpAsafP-tMtvWuHHgW2tiOjBJYoTJIvlFE5ATPGoK9gCg6cxaMISjXV1MBXAbqXMIEXs9oIaxk8ZvwqNWiqsUmeylgCBm3VahPqHSR4D30pYt1ESICW82AlQqvoYvMwRG2ojbwRKaOKSE-UEcwp41dTYWfCoC4LvMaGin9A_alP7gxea"/>
+<h2 class="font-headline-md text-headline-md text-primary">Royal Group</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Excellence in Architecture</p>
+</div>
+<nav class="flex flex-col gap-2 font-body-md text-body-md">
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="flex items-center gap-4 p-3 bg-secondary-container text-on-secondary-container font-bold rounded-lg Active: translate-x-1" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">domain</span> Projects
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">construction</span> Services
+            </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">contact_support</span> Inquiry
+            </a>
+</nav>
+<div class="mt-auto">
+<button class="w-full bg-primary text-on-primary font-button text-button uppercase py-3 rounded-none">Get a Quote</button>
+</div>
+</div>
+<!-- Mobile Header/Toggle -->
+<div class="md:hidden flex justify-between items-center p-4 bg-surface border-b border-primary/10 sticky top-0 z-40">
+<span class="font-headline-md text-headline-md text-primary">Royal Group</span>
+<button class="p-2" id="nav-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<main class="flex-grow pt-24 md:pt-32 pb-section-gap">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter mb-16 text-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-primary mb-6">Premium Project Gallery</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">Explore our portfolio of architectural masterpieces, luxury interiors, and monumental commercial developments.</p>
+</section>
+<!-- Filters -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-gap">
+<div class="flex flex-wrap justify-center gap-4 md:gap-8 border-b border-outline/20 pb-4">
+<button class="font-label-caps text-label-caps uppercase text-primary border-b-2 border-secondary pb-2 px-2">All Projects</button>
+<button class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors pb-2 px-2">Construction</button>
+<button class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors pb-2 px-2">Interior</button>
+<button class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors pb-2 px-2">Commercial</button>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-y-16 md:gap-x-8">
+<!-- Project 1 (Wide) -->
+<article class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-video bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A breathtaking, hyper-realistic architectural visualization of a modern luxury glass and steel skyscraper during golden hour. The building features cascading terraces with lush green foliage. The scene is illuminated by warm, dramatic sunlight casting long shadows across the pristine plaza below. The overall aesthetic is highly detailed, corporate modern, conveying immense wealth and structural permanence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6ZU9KP_UAQPi93dsr4T2CyamJNePnJesM7wspSPPcs4eI0h1kS4vjEpahGO_DNREmWBsNaHnclRR_BuwSQ_3D-TLDFXl6ZlHSl1PfUEvLXkZtQ8L6i5U4tTqznROloB4UOhr9WEd8yIs8FPJRSuMAOg4t-SQEMSP-8vciCPpiOFRyDhAuV8HNJuUmBUSdhG4uFt75zIQgejg_d-JNTQ_OGdPsgRrJJ4uoEhlNyeD8gm760KpNuxW8"/>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">The Apex Tower</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Commercial • Downtown Metropolis</p>
+</div>
+<a class="mt-4 md:mt-0 font-button text-button uppercase text-primary text-link-hover" href="#">View Details</a>
+</div>
+</article>
+<!-- Project 2 (Narrow) -->
+<article class="md:col-span-4 group cursor-pointer md:mt-24">
+<div class="relative overflow-hidden mb-6 aspect-[3/4] bg-surface-container-low">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An exquisite interior design shot of a high-end luxury living room. The space features minimalist bespoke furniture, wide-plank oak flooring, and a monumental marble fireplace. Natural light floods in through floor-to-ceiling windows. The color palette is composed of soft creams, deep navy accents, and subtle metallic gold finishes. The mood is serene, opulent, and architecturally precise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp8uFvylBzUHVvZ40IO2mjxcET7tpoYquhEG5lK_GocQFA_AL9Mx9BnfCoVhRY4k7M2jyyKQNmYYKuXpA1M-APuTtDKOy39uUb2aiILNqoTWZh5FuhwLv1iuEmt1dDU3mbSZGSh9ScP5S7Vc3-Q2oW056FdmoS4Hxil5JUcWLiY9z-ZmlE6wBTLDjJCpCngXojnQYzXXCLBfpsuhiPYwU1j6Dpnd8nZRidshsSxDAI-SgO0KpsnVON"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Villa Serenite</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Interior • Coastal Riviera</p>
+</div>
+</article>
+<!-- Project 3 (Full Width slider concept placeholder) -->
+<article class="md:col-span-12 group mt-section-gap relative">
+<div class="relative overflow-hidden mb-8 h-[60vh] bg-surface-container-low flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A dramatic architectural photo of a sprawling brutalist concrete museum complex set against a stark, clear blue sky. The geometric forms are monumental and precise, creating sharp contrasting shadows. A sleek reflection pool in the foreground mirrors the structure perfectly. The image conveys immense structural solidity, modernist elegance, and corporate luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoG8GalT_oc1SOE8GxR3uorHI0KjA7gYc_GpabwngB0iaEv5YY_2dz-LTm6rNb9pZgaXGmptmT30V5KUubECTFF9AO8-pyzu2u8nDoq1OvfdUnQFsFJNcOtRUKiw2g2bJ63EziiYiImrlC7krCqulvvpXPdiQwp_pduCJZJ9Gf4ZK9K4SsnGhRTsV10CrU2o4i7VSOUtpkpfI9XXpp7z9sFm5oda3Q2tSitzWEnVOrijNqgVNMDVTh"/>
+<div class="z-10 text-center bg-surface/90 backdrop-blur-sm p-8 max-w-xl mx-auto border border-outline/10 gold-glow">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">The Grand Museum</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">A monumental achievement in modern structural engineering and cultural design.</p>
+<button class="border border-secondary text-secondary px-8 py-3 font-button text-button uppercase hover:bg-secondary hover:text-white transition-colors">Explore Project</button>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-primary-container relative w-full mt-section-gap border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto py-section-gap px-gutter">
+<div class="col-span-1 md:col-span-2">
+<h2 class="font-headline-lg text-headline-lg text-secondary-fixed mb-4">Royal Group</h2>
+<p class="font-body-md text-body-md text-on-primary-container max-w-md">© 2024 Royal Group. Architectural Excellence.</p>
+</div>
+<div class="col-span-1">
+<nav class="flex flex-col gap-4 font-body-md text-body-md">
+<a class="text-on-primary-container/70 hover:text-on-primary-container transition-colors Hover: text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Privacy Policy</a>
+<a class="text-on-primary-container/70 hover:text-on-primary-container transition-colors Hover: text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Terms of Service</a>
+</nav>
+</div>
+<div class="col-span-1">
+<nav class="flex flex-col gap-4 font-body-md text-body-md">
+<a class="text-on-primary-container/70 hover:text-on-primary-container transition-colors Hover: text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Google Maps</a>
+<a class="text-on-primary-container/70 hover:text-on-primary-container transition-colors Hover: text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Contact</a>
+</nav>
+</div>
+</div>
+</footer>
+<script>
+        // Simple mobile nav toggle
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            const nav = document.getElementById('mobile-nav');
+            if (nav.classList.contains('translate-x-[-100%]')) {
+                nav.classList.remove('translate-x-[-100%]');
+                nav.classList.add('translate-x-0');
+            } else {
+                nav.classList.add('translate-x-[-100%]');
+                nav.classList.remove('translate-x-0');
+            }
+        });
+    </script>
+</body></html>

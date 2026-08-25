@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1b2e"/><stop offset="1" stop-color="#081625"/>
+</linearGradient>
+<filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="10.8"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/>
+<rect x="0" y="0" width="1600" height="558" fill="#0d2138"/><rect x="0" y="558" width="1600" height="342" fill="#081625"/><path d="M0 558 L1600 558 L1312 900 L288 900 Z" fill="#050d16"/><line x1="800" y1="558" x2="288" y2="900" stroke="#d4af3733" stroke-width="1"/>
+<line x1="800" y1="558" x2="1312" y2="900" stroke="#d4af3733" stroke-width="1"/><rect x="128" y="126.00000000000001" width="480" height="270" fill="#b8912b14" stroke="#b8912b66" stroke-width="1.5"/>
+<line x1="128" y1="261" x2="608" y2="261" stroke="#b8912b66" stroke-width="1"/>
+<line x1="368" y1="126.00000000000001" x2="368" y2="396" stroke="#b8912b66" stroke-width="1"/>
+<circle cx="320" cy="198" r="6" fill="#b8912b" opacity="0.5"/><rect x="992" y="126.00000000000001" width="480" height="270" fill="#b8912b14" stroke="#b8912b66" stroke-width="1.5"/>
+<line x1="992" y1="261" x2="1472" y2="261" stroke="#b8912b66" stroke-width="1"/>
+<line x1="1232" y1="126.00000000000001" x2="1232" y2="396" stroke="#b8912b66" stroke-width="1"/><rect x="96" y="468" width="352" height="90" fill="#102a47" stroke="#b8912b44" stroke-width="1"/>
+<rect x="1152" y="450" width="320" height="108" fill="#102a47" stroke="#b8912b44" stroke-width="1"/><rect x="608" y="252.00000000000003" width="384" height="135" fill="#050d16" stroke="#b8912b88" stroke-width="1.5"/>
+<rect x="720" y="387" width="160" height="63.00000000000001" fill="#0a1b2e" stroke="#b8912b44" stroke-width="1"/>
+<rect x="672" y="450" width="256" height="3" fill="#b8912b" opacity="0.7"/>
+<circle cx="618.7450411816803" cy="784.2347863988182" r="2.3477541928867596" fill="#c9a227" opacity="0.6484059097237913" filter="url(#blur)"/><circle cx="1212.8536230013024" cy="850.6050829079957" r="2.6942946440979347" fill="#d4af37" opacity="0.6144889743833286" filter="url(#blur)"/><circle cx="1051.2796406872942" cy="515.4442908779924" r="1.916490030622338" fill="#c9a227" opacity="0.508236467958538" filter="url(#blur)"/><circle cx="662.6986029849846" cy="727.652836184787" r="1.4980206014113597" fill="#f0d77b" opacity="0.6554703714351497" filter="url(#blur)"/><circle cx="1066.3956170279512" cy="474.4981171910177" r="1.4645854951183244" fill="#c9a227" opacity="0.44813984641718674" filter="url(#blur)"/><circle cx="1322.7728373011448" cy="311.6256953736887" r="1.4460401059342733" fill="#d4af37" opacity="0.5464612377325357" filter="url(#blur)"/><circle cx="1176.1402135603782" cy="515.8495190161511" r="2.148338032210403" fill="#b8912b" opacity="0.5400840045372415" filter="url(#blur)"/><circle cx="171.77162178408895" cy="4.98271286719605" r="1.953736973159824" fill="#d4af37" opacity="0.48011567081795803" filter="url(#blur)"/><circle cx="1137.2173314621753" cy="428.82878800333884" r="2.1710917477361353" fill="#e6c65c" opacity="0.3602370024240748" filter="url(#blur)"/><circle cx="1340.6206137224196" cy="627.2203090727425" r="1.925698054174752" fill="#d4af37" opacity="0.4529426843872958" filter="url(#blur)"/><circle cx="783.7379459215971" cy="791.2924293388112" r="3.113289071020339" fill="#c9a227" opacity="0.310040712384526" filter="url(#blur)"/><circle cx="421.3468553597791" cy="734.5239046656172" r="2.8245394356663054" fill="#b8912b" opacity="0.258888900284138" filter="url(#blur)"/><circle cx="1282.9488760246659" cy="556.6393735616651" r="3.0810651832637683" fill="#e6c65c" opacity="0.6595129372596336" filter="url(#blur)"/><circle cx="1196.865702232749" cy="459.2540504686786" r="1.5212115766113676" fill="#d4af37" opacity="0.5159033687160832" filter="url(#blur)"/>
+<rect x="80" y="45" width="1440" height="810" fill="none" stroke="#d4af3766" stroke-width="1.5"/>
+<text x="800" y="846" text-anchor="middle" font-family="Georgia, serif" font-size="40.5" fill="#d4af37" letter-spacing="8" opacity="0.9">AFTER</text>
+</svg>

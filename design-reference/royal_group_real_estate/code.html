@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Royal Group - Real Estate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#574500",
+                      "surface-container-low": "#f5f3f3",
+                      "tertiary-fixed-dim": "#c5c7c8",
+                      "surface": "#fbf9f8",
+                      "primary": "#000000",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed-variant": "#3b4859",
+                      "error": "#ba1a1a",
+                      "background": "#fbf9f8",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#44474c",
+                      "on-background": "#1b1c1c",
+                      "inverse-surface": "#303030",
+                      "on-tertiary-fixed-variant": "#454748",
+                      "on-secondary-container": "#745c00",
+                      "secondary-container": "#fed65b",
+                      "primary-fixed-dim": "#bac7dc",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#dbd9d9",
+                      "secondary-fixed-dim": "#e9c349",
+                      "primary-container": "#0f1c2c",
+                      "surface-container": "#efeded",
+                      "on-tertiary-fixed": "#191c1d",
+                      "on-primary-fixed": "#0f1c2c",
+                      "tertiary-fixed": "#e1e3e4",
+                      "surface-container-high": "#eae8e7",
+                      "outline": "#75777d",
+                      "on-surface": "#1b1c1c",
+                      "on-tertiary-container": "#828485",
+                      "on-secondary": "#ffffff",
+                      "inverse-on-surface": "#f2f0f0",
+                      "inverse-primary": "#bac7dc",
+                      "surface-container-highest": "#e4e2e2",
+                      "on-primary-container": "#778598",
+                      "outline-variant": "#c4c6cc",
+                      "secondary": "#735c00",
+                      "surface-bright": "#fbf9f8",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#000000",
+                      "secondary-fixed": "#ffe088",
+                      "surface-tint": "#525f71",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#241a00",
+                      "surface-variant": "#e4e2e2",
+                      "primary-fixed": "#d6e3f9",
+                      "tertiary-container": "#191c1d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "gutter": "32px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Playfair Display"
+                      ],
+                      "label-caps": [
+                              "Montserrat"
+                      ],
+                      "display-lg-mobile": [
+                              "Playfair Display"
+                      ],
+                      "headline-lg": [
+                              "Playfair Display"
+                      ],
+                      "display-lg": [
+                              "Playfair Display"
+                      ],
+                      "body-md": [
+                              "Montserrat"
+                      ],
+                      "button": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.15em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .gold-glow:hover {
+            box-shadow: 0 0 40px 10px rgba(212, 175, 55, 0.15);
+        }
+        .ghost-border {
+            border: 1px solid rgba(15, 28, 44, 0.1);
+        }
+        .nav-link-hover {
+            position: relative;
+        }
+        .nav-link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link-hover:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<nav class="hidden md:block bg-surface/80 dark:bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-primary/10 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+<div class="flex items-center gap-4">
+<img alt="Royal Group Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc0Ps9hBCmVC5UpaiDd-2eOLi4gOGfAWNaDqCF7rON60b5GvjxlEYl7aXWzVnAl3saq6OQxpAsafP-tMtvWuHHgW2tiOjBJYoTJIvlFE5ATPGoK9gCg6cxaMISjXV1MBXAbqXMIEXs9oIaxk8ZvwqNWiqsUmeylgCBm3VahPqHSR4D30pYt1ESICW82AlQqvoYvMwRG2ojbwRKaOKSE-UEcwp41dTYWfCoC4LvMaGin9A_alP7gxea"/>
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Royal Group</div>
+</div>
+<div class="flex items-center gap-8 font-button text-button uppercase tracking-wider">
+<a class="text-on-surface hover:text-secondary transition-colors duration-300" href="#">Construction</a>
+<a class="text-on-surface hover:text-secondary transition-colors duration-300" href="#">Interiors</a>
+<a class="text-secondary border-b-2 border-secondary pb-1" href="#">Real Estate</a>
+<a class="text-on-surface hover:text-secondary transition-colors duration-300" href="#">Maintenance</a>
+</div>
+<div class="flex items-center gap-4 font-button text-button uppercase tracking-wider">
+<button class="text-on-surface hover:text-secondary transition-all duration-300">Login</button>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-none hover:bg-[#D4AF37] hover:text-on-secondary-fixed transition-colors duration-300">Contact Us</button>
+</div>
+</div>
+</nav>
+<!-- Mobile Navigation (Bottom Nav Bar substitute for simplicity in this constrained view) -->
+<div class="md:hidden fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-primary/10 h-16 flex items-center justify-between px-margin-mobile">
+<div class="flex items-center gap-2">
+<img alt="Royal Group Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc0Ps9hBCmVC5UpaiDd-2eOLi4gOGfAWNaDqCF7rON60b5GvjxlEYl7aXWzVnAl3saq6OQxpAsafP-tMtvWuHHgW2tiOjBJYoTJIvlFE5ATPGoK9gCg6cxaMISjXV1MBXAbqXMIEXs9oIaxk8ZvwqNWiqsUmeylgCBm3VahPqHSR4D30pYt1ESICW82AlQqvoYvMwRG2ojbwRKaOKSE-UEcwp41dTYWfCoC4LvMaGin9A_alP7gxea"/>
+<div class="font-headline-md text-[24px] font-bold text-primary leading-tight">Royal Group</div>
+</div>
+<button class="text-on-surface"><span class="material-symbols-outlined text-[28px]">menu</span></button>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 md:pt-0">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A breathtaking aerial view of a pristine, high-end residential land plot at dawn. The scene is bathed in soft, golden-hour light, highlighting the lush greenery and well-planned grid structure of the development. In the background, a modern city skyline subtly hints at urban connectivity. The composition is expansive and minimalist, evoking a sense of luxury, potential, and architectural excellence, characteristic of premium real estate marketing." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4xS8hOh5bZQsAAAlQBr6YzPKJLgaEUI9u4W2-5rAC54mcasj0ntp2UT884z196gq3R4GazDUJujaPD20LrshMeGQuEjBSspac9WydfIG7vREPZv6EgwdlxXEI2rd8Z-Id-K0fK1jvt5qlGtD5LvXjgDBK1hTaR_XOGcZjlAZ-oKYHpsxQrcMJr6Zk7BrcAfnEWrRbO6Uz8dE7rqQQgTXwffwWzJfw87naqy7BH3aSmdbs_bNDdpe8')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary-container/90 via-primary-container/60 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-gutter md:px-margin-mobile">
+<div class="max-w-2xl text-on-primary">
+<p class="font-label-caps text-label-caps text-secondary-fixed mb-4">Prime Real Estate</p>
+<h1 class="font-display-lg text-display-lg hidden md:block mb-6 text-on-primary">Find Your Dream Land</h1>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:hidden mb-6 text-on-primary">Find Your Dream Land</h1>
+<p class="font-body-lg text-body-lg mb-10 text-surface-container-high max-w-lg">
+                    Discover premium residential and commercial plots curated for architectural excellence. Build your legacy on a foundation of trust and uncompromising quality.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-secondary text-on-secondary font-button text-button uppercase tracking-wider px-8 py-4 rounded-none hover:bg-on-secondary-fixed-variant transition-colors">
+                        Explore Properties
+                    </button>
+<button class="bg-transparent border border-secondary text-secondary-fixed font-button text-button uppercase tracking-wider px-8 py-4 rounded-none hover:bg-secondary/10 transition-colors">
+                        Consult an Expert
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid) -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-container-max mx-auto px-gutter md:px-margin-mobile">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Comprehensive Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    From initial inquiry to final handover, our real estate division ensures a seamless, transparent, and luxurious experience.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Buy -->
+<div class="bg-surface-container-lowest p-10 ghost-border gold-glow transition-all duration-300 md:col-span-2 group">
+<span class="material-symbols-outlined text-[40px] text-secondary mb-6 group-hover:scale-110 transition-transform">real_estate_agent</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Buy Premium Plots</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Access exclusive residential and commercial land banks in high-growth corridors. Carefully vetted for clear titles and immediate development potential.
+                    </p>
+<a class="inline-flex items-center font-button text-button text-primary uppercase tracking-wider nav-link-hover" href="#">
+                        View Listings <span class="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Sell -->
+<div class="bg-primary-container text-on-primary-container p-10 transition-all duration-300 group">
+<span class="material-symbols-outlined text-[40px] text-secondary-fixed mb-6 group-hover:scale-110 transition-transform">sell</span>
+<h3 class="font-headline-md text-[24px] font-semibold text-on-primary mb-3">Sell with Confidence</h3>
+<p class="font-body-md text-body-md text-on-primary-container/80 mb-6">
+                        Leverage our extensive network and market expertise to ensure maximum value for your property assets.
+                    </p>
+</div>
+<!-- Legal Verification -->
+<div class="bg-surface-container p-10 ghost-border gold-glow transition-all duration-300 group">
+<span class="material-symbols-outlined text-[40px] text-primary mb-6 group-hover:scale-110 transition-transform">gavel</span>
+<h3 class="font-headline-md text-[24px] font-semibold text-primary mb-3">Legal Verification</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Rigorous due diligence. We ensure every plot is free from encumbrances, providing absolute peace of mind.
+                    </p>
+</div>
+<!-- Consultation -->
+<div class="bg-surface-container p-10 ghost-border gold-glow transition-all duration-300 md:col-span-2 flex flex-col md:flex-row items-center gap-8 group">
+<div class="flex-1">
+<span class="material-symbols-outlined text-[40px] text-primary mb-6 group-hover:scale-110 transition-transform">files</span>
+<h3 class="font-headline-md text-[24px] font-semibold text-primary mb-3">Expert Consultation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Strategic advice on land acquisition, development feasibility, and long-term investment planning tailored to your architectural vision.
+                        </p>
+</div>
+<div class="w-full md:w-1/3 h-40">
+<div class="w-full h-full bg-cover bg-center rounded-lg shadow-sm" data-alt="A close-up shot of a sophisticated architectural blueprint spread on a sleek, dark mahogany desk. A gold-plated drafting compass and a high-end fountain pen rest elegantly on the plans. The lighting is focused and warm, emphasizing the precise lines of the blueprint and creating a moody, professional atmosphere. This minimalist composition conveys strategic planning and expert consultation in a luxury corporate setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8aZG2DzEh_ndmuPPbSePRvyaxeqXils3Zb5y6UCDit3rGhRLjvoAqQmkOPCMJU65leyKlX-rNSne1rqpT9z8QIaYBEslvz2EqR5qMkYFmR_Nq6tG0WWyyHnSmZ5e-fesZosQK6uqgbQ_x57AC6qve7_z182kDFAMlKvUPQGVcWaVTbLkuv8T_j7OB4ZVcAbsHgMYkI-eSSrY9dhzE_JkyMkDWDrXv7uFhGAPg4jegv5JitBFxDwO6')"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="relative w-full mt-section-gap bg-primary-container dark:bg-primary-container border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto py-section-gap px-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-lg text-[32px] text-secondary-fixed mb-4">Royal Group</div>
+<p class="font-body-md text-body-md text-on-primary-container/70 mb-4">Excellence in Architecture &amp; Real Estate.</p>
+<p class="font-body-md text-body-md text-on-primary-container/70">© 2024 Royal Group. Architectural Excellence.</p>
+</div>
+<div class="col-span-1 flex flex-col gap-3 font-body-md text-body-md">
+<h4 class="font-label-caps text-label-caps text-on-primary tracking-wider mb-2">Legal</h4>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Privacy Policy</a>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Terms of Service</a>
+</div>
+<div class="col-span-1 flex flex-col gap-3 font-body-md text-body-md">
+<h4 class="font-label-caps text-label-caps text-on-primary tracking-wider mb-2">Connect</h4>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Contact</a>
+<a class="text-on-primary-container/70 hover:text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Google Maps</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Royal Group</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#574500",
+                    "surface-container-low": "#f5f3f3",
+                    "tertiary-fixed-dim": "#c5c7c8",
+                    "surface": "#fbf9f8",
+                    "primary": "#000000",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#3b4859",
+                    "error": "#ba1a1a",
+                    "background": "#fbf9f8",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#44474c",
+                    "on-background": "#1b1c1c",
+                    "inverse-surface": "#303030",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "on-secondary-container": "#745c00",
+                    "secondary-container": "#fed65b",
+                    "primary-fixed-dim": "#bac7dc",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#dbd9d9",
+                    "secondary-fixed-dim": "#e9c349",
+                    "primary-container": "#0f1c2c",
+                    "surface-container": "#efeded",
+                    "on-tertiary-fixed": "#191c1d",
+                    "on-primary-fixed": "#0f1c2c",
+                    "tertiary-fixed": "#e1e3e4",
+                    "surface-container-high": "#eae8e7",
+                    "outline": "#75777d",
+                    "on-surface": "#1b1c1c",
+                    "on-tertiary-container": "#828485",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f2f0f0",
+                    "inverse-primary": "#bac7dc",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-primary-container": "#778598",
+                    "outline-variant": "#c4c6cc",
+                    "secondary": "#735c00",
+                    "surface-bright": "#fbf9f8",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#000000",
+                    "secondary-fixed": "#ffe088",
+                    "surface-tint": "#525f71",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-variant": "#e4e2e2",
+                    "primary-fixed": "#d6e3f9",
+                    "tertiary-container": "#191c1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "gutter": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Playfair Display"
+                    ],
+                    "label-caps": [
+                            "Montserrat"
+                    ],
+                    "display-lg-mobile": [
+                            "Playfair Display"
+                    ],
+                    "headline-lg": [
+                            "Playfair Display"
+                    ],
+                    "display-lg": [
+                            "Playfair Display"
+                    ],
+                    "body-md": [
+                            "Montserrat"
+                    ],
+                    "button": [
+                            "Montserrat"
+                    ],
+                    "body-lg": [
+                            "Montserrat"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.15em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "button": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.0",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="hidden md:block bg-surface/80 dark:bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-primary/10 dark:border-primary-fixed/10 shadow-sm">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed flex items-center gap-4">
+<img alt="Royal Group Logo" class="h-12 w-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc0Ps9hBCmVC5UpaiDd-2eOLi4gOGfAWNaDqCF7rON60b5GvjxlEYl7aXWzVnAl3saq6OQxpAsafP-tMtvWuHHgW2tiOjBJYoTJIvlFE5ATPGoK9gCg6cxaMISjXV1MBXAbqXMIEXs9oIaxk8ZvwqNWiqsUmeylgCBm3VahPqHSR4D30pYt1ESICW82AlQqvoYvMwRG2ojbwRKaOKSE-UEcwp41dTYWfCoC4LvMaGin9A_alP7gxea"/>
+                Royal Group
+            </div>
+<div class="flex gap-8 items-center font-button text-button uppercase tracking-wider">
+<a class="text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Construction</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Interiors</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Real Estate</a>
+<a class="text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Maintenance</a>
+</div>
+<div class="flex gap-4 font-button text-button uppercase tracking-wider items-center">
+<a class="text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300" href="#">Login</a>
+<a class="bg-primary text-on-primary px-6 py-3 hover:bg-secondary transition-colors duration-300" href="#">Contact Us</a>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-[60] bg-surface dark:bg-surface-container-highest shadow-2xl border-t border-outline/20">
+<div class="flex justify-around items-center h-16 px-4">
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-label-caps text-label-caps">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">domain</span>
+<span class="font-label-caps text-label-caps">Projects</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">construction</span>
+<span class="font-label-caps text-label-caps">Services</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-secondary font-bold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">contact_support</span>
+<span class="font-label-caps text-label-caps">Inquiry</span>
+</a>
+</div>
+</nav>
+<main class="flex-grow pt-32 pb-section-gap px-gutter max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-gutter">
+<!-- Header -->
+<div class="lg:col-span-12 mb-12">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Contact Royal Group</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">We are ready to bring your architectural vision to life. Reach out to our team of experts to discuss your next construction or interior project.</p>
+</div>
+<!-- Contact Form (Bento Grid Style) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-8 lg:p-12 shadow-[0_0_40px_rgba(212,175,55,0.05)] border border-outline/10 relative overflow-hidden group">
+<!-- Ghost border / Gold Glow effect -->
+<div class="absolute inset-0 border border-secondary/0 group-hover:border-secondary/20 transition-all duration-500 pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md text-primary mb-8">Send an Inquiry</h2>
+<form class="space-y-8 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase tracking-wider" for="name">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 px-0 py-2 font-body-md text-body-md text-primary transition-colors" id="name" name="name" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase tracking-wider" for="phone">Phone Number</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 px-0 py-2 font-body-md text-body-md text-primary transition-colors" id="phone" name="phone" placeholder="+91 98409 51292" required="" type="tel"/>
+</div>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase tracking-wider" for="email">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 px-0 py-2 font-body-md text-body-md text-primary transition-colors" id="email" name="email" placeholder="your@email.com" required="" type="email"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase tracking-wider" for="service">Service of Interest</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 px-0 py-2 font-body-md text-body-md text-primary transition-colors appearance-none" id="service" name="service">
+<option disabled="" selected="" value="">Select a Service</option>
+<option value="construction">Construction</option>
+<option value="interiors">Interiors</option>
+<option value="real-estate">Real Estate</option>
+<option value="maintenance">Maintenance</option>
+</select>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block uppercase tracking-wider" for="message">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-secondary focus:ring-0 px-0 py-2 font-body-md text-body-md text-primary transition-colors resize-none" id="message" name="message" placeholder="Tell us about your project..." required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-button text-button uppercase tracking-wider py-4 hover:bg-secondary transition-colors duration-300" type="submit">
+                    Submit Inquiry
+                </button>
+</form>
+</div>
+<!-- Contact Info & Map (Asymmetric) -->
+<div class="lg:col-span-5 flex flex-col gap-12">
+<!-- Contact Details Card -->
+<div class="bg-surface-container-low p-8 lg:p-12 border border-outline/10">
+<h3 class="font-headline-md text-headline-md text-primary mb-8">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">location_on</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Corporate Office</p>
+<p class="font-body-md text-body-md text-primary">No.754/1007, BV Colony, 23rd Street,<br/>Vyasarpadi, Chennai - 600039</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">phone</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Phone</p>
+<a class="font-body-md text-body-md text-primary hover:text-secondary transition-colors" href="tel:+919840951292">+91 98409 51292</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">mail</span>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-1">Email</p>
+<a class="font-body-md text-body-md text-primary hover:text-secondary transition-colors" href="mailto:RoyalBuilders3924@gmail.com">RoyalBuilders3924@gmail.com</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Embed Container -->
+<div class="flex-grow min-h-[300px] bg-surface-container relative overflow-hidden group">
+<!-- Using a placeholder image for the map embed to maintain visual fidelity in mockup -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A highly detailed top-down view of a modern architectural map focusing on Chennai, India. The map features a minimalist, corporate luxury aesthetic with a sophisticated color palette of deep navy blues, pristine whites, and subtle gold accents delineating major roads and landmarks. The lighting is soft and diffuse, creating a clean, high-end light-mode appearance. The overall mood is precise, professional, and indicative of a premier real estate and construction firm." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfiJ5YaY2YY1Q0G1zCOL0EjLsPW9xlBVK2AY1EcaPfUI6FZQAZhFLXLCJ_5Iauwx45M90r54UCxhcJBdQwF-Kd7mKu-IClUknvKElRbXXQNaGaBfQSR3zg86R61OQkIpqD9EhhUl0GnfYRCsGdML3y6rndUfHtqXTdr4c1FKPsrWq2H533agpMIhVi7M1Ds35zlIeCs4gBmpJm6R93IW8gwq6y0IzvTipqQtw__7fQjt_i4nwQrkzl')"></div>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div> <!-- Subtle overlay -->
+<div class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-sm px-4 py-2 font-label-caps text-label-caps text-primary uppercase tracking-wider">
+                    Vyasarpadi, Chennai
+                </div>
+</div>
+</div>
+</main>
+<!-- Floating WhatsApp Button -->
+<a aria-label="Chat on WhatsApp" class="fixed bottom-24 md:bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center" href="https://wa.me/919840951292" rel="noopener noreferrer" target="_blank">
+<!-- SVG for WhatsApp icon as standard Material doesn't have it natively in outlined easily recognizable -->
+<svg class="bi bi-whatsapp" fill="currentColor" height="24" viewbox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"></path>
+</svg>
+</a>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-primary-container relative w-full mt-section-gap border-t border-outline/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto py-section-gap px-gutter">
+<div class="md:col-span-1 flex flex-col gap-4">
+<span class="font-headline-lg text-headline-lg text-secondary-fixed">Royal Group</span>
+<p class="text-on-primary-container font-body-md text-body-md">© 2024 Royal Group. Architectural Excellence.</p>
+</div>
+<div class="md:col-span-3 flex flex-col sm:flex-row gap-8 sm:justify-end items-start sm:items-center">
+<a class="font-body-md text-body-md text-on-primary-container/70 hover:text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-primary-container/70 hover:text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-primary-container/70 hover:text-secondary-fixed transition-all hover:translate-x-1 duration-300" href="#">Google Maps</a>
+<a class="font-body-md text-body-md text-secondary-fixed font-bold hover:translate-x-1 transition-transform duration-300" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

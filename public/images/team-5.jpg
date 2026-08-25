@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050d16"/><stop offset="1" stop-color="#081625"/>
+</linearGradient>
+<filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9.6"/></filter>
+</defs>
+<rect width="800" height="1000" fill="url(#bg)"/>
+<rect width="800" height="1000" fill="url(#bg)"/>
+<circle cx="400" cy="500" r="304" fill="#0a1b2e" opacity="0.9"/>
+<circle cx="400" cy="500" r="304" fill="none" stroke="#f0d77b" stroke-width="2" opacity="0.7"/>
+<circle cx="400" cy="500" r="240" fill="none" stroke="#f0d77b" stroke-width="1" opacity="0.4" stroke-dasharray="3 4"/>
+<text x="400" y="500" text-anchor="middle" dominant-baseline="central" font-family="Georgia, serif" font-size="208" fill="#f0d77b" opacity="0.92">AP</text>
+<rect x="96" y="860" width="608" height="50" fill="#f0d77b" opacity="0.35"/>
+<text x="400" y="920" text-anchor="middle" font-family="Georgia, serif" font-size="72" fill="#ffffff" opacity="0.75">ROYAL GROUP</text>
+<circle cx="627.4479868949614" cy="325.91450229562565" r="1.8212942603143372" fill="#f0d77b" opacity="0.7274337413150043" filter="url(#blur)"/><circle cx="769.7724345930724" cy="448.33338281527784" r="2.2926411156973994" fill="#b8912b" opacity="0.6191466452410197" filter="url(#blur)"/><circle cx="150.7824898468249" cy="184.43980821615077" r="3.097533656050234" fill="#d4af37" opacity="0.46520559499748315" filter="url(#blur)"/><circle cx="215.27557383071425" cy="859.6229557225588" r="2.3137390141905003" fill="#d4af37" opacity="0.7003441008042284" filter="url(#blur)"/><circle cx="78.30497961412416" cy="404.20836229073274" r="1.2074794292484778" fill="#f0d77b" opacity="0.5453351737443988" filter="url(#blur)"/><circle cx="653.4338000479312" cy="519.252538922826" r="3.0396334656698785" fill="#b8912b" opacity="0.6836193801991732" filter="url(#blur)"/><circle cx="531.6648485752124" cy="700.20556482496" r="2.617680264179446" fill="#d4af37" opacity="0.567198172359354" filter="url(#blur)"/><circle cx="752.6600841212367" cy="930.0080542126708" r="2.086762857850065" fill="#e6c65c" opacity="0.7094350459330878" filter="url(#blur)"/><circle cx="617.0853856099236" cy="712.7008441429124" r="1.353413057398709" fill="#e6c65c" opacity="0.6707711221746966" filter="url(#blur)"/><circle cx="250.59890758739732" cy="467.83733389705293" r="2.237275314814074" fill="#c9a227" opacity="0.6909251215126948" filter="url(#blur)"/><circle cx="718.5020450123129" cy="831.9444660246114" r="2.2646533971022134" fill="#c9a227" opacity="0.7113347055676089" filter="url(#blur)"/><circle cx="551.2184145633217" cy="390.1357652573547" r="2.817528916158494" fill="#e6c65c" opacity="0.7082724573362025" filter="url(#blur)"/><circle cx="675.0419619842628" cy="646.8362811239605" r="2.3944980626900207" fill="#c9a227" opacity="0.39061594015947354" filter="url(#blur)"/><circle cx="643.9033749717769" cy="821.7910532009747" r="1.5349285127292054" fill="#c9a227" opacity="0.49514460575075103" filter="url(#blur)"/>
+<radialGradient id="vig" cx="50%" cy="45%" r="75%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+</radialGradient><rect width="800" height="1000" fill="url(#vig)"/>
+</svg>
