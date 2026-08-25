@@ -30,7 +30,7 @@ export default function ProjectsPage() {
           </>
         }
         subtitle="Explore our portfolio of architectural masterpieces, luxury interiors and monumental commercial developments across Chennai."
-        image="/images/project-1.jpg"
+        image="/images/project-1.png"
       />
 
       <section className="bg-white py-24 lg:py-32">
