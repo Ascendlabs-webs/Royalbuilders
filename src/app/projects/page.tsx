@@ -130,11 +130,42 @@ export default function ProjectsPage() {
             >
               <div>
                 <p className="max-w-2xl text-[15px] leading-relaxed text-white/70">{selected.description}</p>
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
+
+                {selected.specs && (
+                  <div className="mt-8 border border-crimson-500/40 bg-navy-900/60">
+                    <div className="border-b border-white/10 bg-crimson-500/10 px-6 py-4">
+                      <p className="text-[10px] font-bold tracking-[0.3em] text-crimson-400 uppercase">Specifications</p>
+                    </div>
+                    <dl className="divide-y divide-white/10">
+                      <div className="flex flex-col gap-1 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+                        <dt className="text-[10px] font-bold tracking-[0.25em] text-white/50 uppercase">Area</dt>
+                        <dd className="font-display text-xl font-bold text-white">{selected.specs.area}</dd>
+                      </div>
+                      <div className="flex flex-col gap-1 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+                        <dt className="text-[10px] font-bold tracking-[0.25em] text-white/50 uppercase">Floors</dt>
+                        <dd className="font-display text-xl font-bold text-white">{selected.specs.floors}</dd>
+                      </div>
+                      <div className="flex flex-col gap-1 px-6 py-4 sm:flex-row sm:items-start sm:justify-between">
+                        <dt className="text-[10px] font-bold tracking-[0.25em] text-white/50 uppercase">Configuration</dt>
+                        <dd className="text-right text-sm font-semibold text-white sm:max-w-[60%]">{selected.specs.config}</dd>
+                      </div>
+                      <div className="flex flex-col gap-1 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+                        <dt className="text-[10px] font-bold tracking-[0.25em] text-white/50 uppercase">Duration</dt>
+                        <dd className="text-sm font-semibold text-crimson-400">{selected.specs.duration}</dd>
+                      </div>
+                      <div className="px-6 py-4">
+                        <dt className="text-[10px] font-bold tracking-[0.25em] text-white/50 uppercase">Amenities</dt>
+                        <dd className="mt-1 text-sm font-semibold text-white">{selected.specs.amenities}</dd>
+                      </div>
+                    </dl>
+                  </div>
+                )}
+
+                <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   {[
                     { icon: User, label: "Client", value: selected.client },
                     { icon: MapPin, label: "Location", value: selected.location },
-                    { icon: Calendar, label: "Completion", value: selected.date },
+                    { icon: Calendar, label: "Year", value: selected.date },
                     { icon: Wrench, label: "Services", value: selected.services.join(", ") },
                   ].map(({ icon: Ico, label, value }) => (
                     <div key={label} className="border border-white/10 bg-navy-900/60 p-5">

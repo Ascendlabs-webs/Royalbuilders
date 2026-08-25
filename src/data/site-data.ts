@@ -529,6 +529,13 @@ export type Project = {
   before?: string;
   after?: string;
   description: string;
+  specs?: {
+    area: string;
+    floors: string;
+    config: string;
+    duration: string;
+    amenities: string;
+  };
 };
 
 export const PROJECTS: readonly Project[] = [
@@ -541,6 +548,13 @@ export const PROJECTS: readonly Project[] = [
     image: "/images/project-1.jpg",
     services: ["Residential Construction", "Parking", "Free Amenities"],
     description: "Ground + 2 floors with parking, 3BHK per floor. Built at ₹2,600/sq.ft in 8 months. Free amenities include sump, overhead water tank, and cool tiles on terrace.",
+    specs: {
+      area: "1400 sqft",
+      floors: "F+G+2",
+      config: "Parking • 3BHK per floor",
+      duration: "8 months (2026 — ₹2,600/sq.ft)",
+      amenities: "Free amenities: Sump, Overhead water tank, Cool tiles in terrace, Parking",
+    },
   },
   {
     title: "550 Sq.Ft G+2 Home",
@@ -551,6 +565,13 @@ export const PROJECTS: readonly Project[] = [
     image: "/images/project-2.jpg",
     services: ["Residential Construction", "Free Amenities"],
     description: "Ground + 2 floors with 2BHK layout. Built at ₹2,200/sq.ft in 6 months. Includes sump, overhead water tank, and cool tiles on terrace.",
+    specs: {
+      area: "550 sqft",
+      floors: "F+G+2",
+      config: "2BHK",
+      duration: "6 months (2022 — ₹2,200/sq.ft)",
+      amenities: "Free amenities: Sump, Overhead water tank, Cool tiles in terrace",
+    },
   },
   {
     title: "550 Sq.Ft G+2 Compact Home",
@@ -561,6 +582,13 @@ export const PROJECTS: readonly Project[] = [
     image: "/images/project-3.jpg",
     services: ["Residential Construction", "Free Amenities"],
     description: "Ground + 2 floors with 2BHK configuration. Built at ₹2,200/sq.ft in 6 months with sump, overhead water tank, and cool tiles on terrace.",
+    specs: {
+      area: "550 sqft",
+      floors: "F+G+2",
+      config: "2BHK",
+      duration: "6 months (2022 — ₹2,200/sq.ft)",
+      amenities: "Free amenities: Sump, Overhead water tank, Cool tiles in terrace",
+    },
   },
   {
     title: "1200 Sq.Ft G+2 Multi-Portion",
@@ -571,6 +599,13 @@ export const PROJECTS: readonly Project[] = [
     image: "/images/project-4.jpg",
     services: ["Residential Construction", "Multi-Portion Design"],
     description: "Ground floor: 1BHK × 3 portions. 1st floor: 2BHK × 2 portions. 2nd floor: 2BHK × 2 portions. Total 7 rental portions. Built at ₹2,400/sq.ft.",
+    specs: {
+      area: "1200 sqft",
+      floors: "F+G+2",
+      config: "7 portions — Ground: 1BHK×3 • 1st: 2BHK×2 • 2nd: 2BHK×2",
+      duration: "(2024 — ₹2,400/sq.ft)",
+      amenities: "Ideal for rental income",
+    },
   },
   {
     title: "1400 Sq.Ft G+2 Family Home",
@@ -581,6 +616,13 @@ export const PROJECTS: readonly Project[] = [
     image: "/images/project-5.jpg",
     services: ["Residential Construction", "Mixed Layouts"],
     description: "Ground floor: 2BHK. 1st floor: 3BHK. 2nd floor: 1BHK + 2BHK (2 portions). Built at ₹2,000/sq.ft with premium finishes.",
+    specs: {
+      area: "1400 sqft",
+      floors: "G+2",
+      config: "Ground: 2BHK • 1st: 3BHK • 2nd: 1BHK + 2BHK (2 portions)",
+      duration: "(2018 — ₹2,000/sq.ft)",
+      amenities: "Premium family home",
+    },
   },
   {
     title: "450 Sq.Ft G+1 Home",
@@ -591,6 +633,13 @@ export const PROJECTS: readonly Project[] = [
     image: "/images/project-6.jpg",
     services: ["Residential Construction"],
     description: "Ground floor: 2BHK. 1st floor: 1BHK. Compact and efficient G+1 design built at ₹2,200/sq.ft.",
+    specs: {
+      area: "450 sqft",
+      floors: "G+1",
+      config: "Ground: 2BHK • 1st: 1BHK",
+      duration: "(2022 — ₹2,200/sq.ft)",
+      amenities: "Compact efficient design",
+    },
   },
   {
     title: "1200 Sq.Ft G+2 Multi-Unit",
@@ -601,6 +650,13 @@ export const PROJECTS: readonly Project[] = [
     image: "/images/project-7.jpg",
     services: ["Residential Construction", "Multi-Unit Design"],
     description: "Ground floor: 2BHK + 1BHK. 1st floor: 2BHK + 1BHK. 2nd floor: 2BHK + 2BHK. Built at ₹2,200/sq.ft with modern amenities.",
+    specs: {
+      area: "1200 sqft",
+      floors: "G+2",
+      config: "Ground: 2BHK+1BHK • 1st: 2BHK+1BHK • 2nd: 2BHK+2BHK",
+      duration: "(2020 — ₹2,200/sq.ft)",
+      amenities: "Modern multi-unit home",
+    },
   },
 ] as const;
 
