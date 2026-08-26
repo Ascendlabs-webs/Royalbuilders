@@ -5,7 +5,7 @@ export const SITE = {
   phoneDisplay: "+91 98409 51292",
   phoneRaw: "919840951292",
   whatsapp: "919840951292",
-  email: "RoyalBuilders3924@gmail.com",
+  email: "Royalbuilderschn@gmail.com",
   address: "No.754/1007, BV Colony, 23rd Street, Chennai - 600039",
   addressLines: [
     "No.754/1007, BV Colony,",

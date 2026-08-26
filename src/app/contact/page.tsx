@@ -9,7 +9,7 @@ import { SITE, PHONE_HREF, WHATSAPP_HREF, waLink } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact Royal Builders, Chennai - No.754/1007, BV Colony, 23rd Street, Chennai 600039. Call +91 98409 51292 or email RoyalBuilders3924@gmail.com for a free consultation and site visit.",
+    "Contact Royal Builders, Chennai - No.754/1007, BV Colony, 23rd Street, Chennai 600039. Call +91 98409 51292 or email Royalbuilderschn@gmail.com for a free consultation and site visit.",
 };
 
 const contactJsonLd = {
