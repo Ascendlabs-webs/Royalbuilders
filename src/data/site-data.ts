@@ -25,7 +25,7 @@ export const SERVICES = [
     tagline: "We Build Your Dream Home",
     description:
       "Uncompromising quality in every structural endeavour - from foundational planning to final execution. We turn visions into enduring structural masterpieces.",
-    image: "/images/construction-site-1.jpg",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
     features: [
       "Residential Construction",
       "Villas & Apartments",
@@ -39,7 +39,7 @@ export const SERVICES = [
     tagline: "Premium Interior Solutions",
     description:
       "Elevating spaces with meticulous craftsmanship and visionary design. From conceptual layouts to the final luxurious finishes.",
-    image: "/images/interior-living-1.jpg",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80",
     features: [
       "Modular Kitchens",
       "Wardrobes & TV Units",
@@ -53,7 +53,7 @@ export const SERVICES = [
     tagline: "Find Your Dream Land",
     description:
       "Discover premium residential and commercial plots curated for architectural excellence. Build your legacy on a foundation of trust.",
-    image: "/images/land-1.jpg",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80",
     features: [
       "Residential Land",
       "Commercial Property",
@@ -67,7 +67,7 @@ export const SERVICES = [
     tagline: "Professional Maintenance Services",
     description:
       "Upholding the integrity and luxury of your architectural investments with precise, reliable and comprehensive care.",
-    image: "/images/maintenance-cleaning.jpg",
+    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80",
     features: [
       "Building Repairs",
       "Tank & Sump Cleaning",
