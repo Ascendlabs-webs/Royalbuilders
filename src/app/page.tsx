@@ -5,13 +5,9 @@ import AboutPreview from "@/components/home/AboutPreview";
 import ServicesBento from "@/components/home/ServicesBento";
 import StatsSection from "@/components/home/StatsSection";
 import WhyChoose from "@/components/home/WhyChoose";
-import SectionHeading from "@/components/ui/SectionHeading";
-import GalleryGrid from "@/components/ui/GalleryGrid";
-import Reveal from "@/components/ui/Reveal";
-import Button from "@/components/ui/Button";
-import TestimonialCarousel from "@/components/ui/TestimonialCarousel";
 import CTASection from "@/components/ui/CTASection";
-import { GALLERY_ITEMS, GALLERY_FILTERS, TESTIMONIALS } from "@/data/site-data";
+import TestimonialCarousel from "@/components/ui/TestimonialCarousel";
+import { TESTIMONIALS } from "@/data/site-data";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -53,32 +49,9 @@ export default function HomePage() {
       <Marquee />
 
       <AboutPreview />
-
       <ServicesBento />
-
       <StatsSection />
-
       <WhyChoose />
-
-      <section className="bg-white py-24 lg:py-32">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-8">
-          <SectionHeading
-            kicker="Project Gallery"
-            title={
-              <>
-                Crafted with <span className="text-gradient-crimson">Pride</span>
-              </>
-            }
-            subtitle="A glimpse of the homes, interiors and commercial spaces we have delivered across Chennai."
-          />
-          <GalleryGrid items={[...GALLERY_ITEMS]} filters={[...GALLERY_FILTERS]} />
-          <Reveal className="mt-12 text-center">
-            <Button href="/projects" variant="navy">
-              View All Projects
-            </Button>
-          </Reveal>
-        </div>
-      </section>
 
       <section className="relative overflow-hidden bg-alabaster py-24 lg:py-32">
         <div
@@ -87,15 +60,6 @@ export default function HomePage() {
           aria-hidden
         />
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-8">
-          <SectionHeading
-            kicker="Client Stories"
-            title={
-              <>
-                What Our <span className="text-gradient-crimson">Clients Say</span>
-              </>
-            }
-            subtitle="Rated 4.9/5 on Google by homeowners, investors and businesses across Chennai."
-          />
           <TestimonialCarousel items={[...TESTIMONIALS]} />
         </div>
       </section>
