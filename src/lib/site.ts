@@ -9,7 +9,7 @@ export const SITE = {
   address: "No.754/1007, BV Colony, 23rd Street, Chennai - 600039",
   addressLines: [
     "No.754/1007, BV Colony,",
-    "23rd Street, Chennai,",
+    "23rd Street,",
     "Chennai - 600039",
   ],
   city: "Chennai",
