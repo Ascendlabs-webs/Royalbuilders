@@ -652,7 +652,6 @@ export const PROJECTS: readonly Project[] = [
 
 export const PROJECT_FILTERS = [
   "All",
-  "Residential",
   "Construction",
 ] as const;
 
