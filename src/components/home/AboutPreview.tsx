@@ -17,7 +17,7 @@ export default function AboutPreview() {
           <div className="corner-frame relative p-3">
             <ParallaxImage
               src="/images/about-office.jpg"
-              alt="Royal Builders office and tower construction"
+              alt="Royal Builders office - BV Colony, Chennai"
               className="h-[420px] md:h-[560px]"
               speed={0.12}
             />
