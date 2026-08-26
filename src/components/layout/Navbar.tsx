@@ -59,7 +59,7 @@ export default function Navbar() {
               <span className="flex items-center gap-2">
                 <Clock size={12} className="text-crimson-500" /> {SITE.hours}
               </span>
-              <span className="tracking-[0.3em] text-crimson-500 uppercase">Vyasarpadi, Chennai</span>
+              <span className="tracking-[0.3em] text-crimson-500 uppercase">Chennai</span>
             </div>
           </div>
         </div>

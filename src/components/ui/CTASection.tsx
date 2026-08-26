@@ -93,7 +93,7 @@ export default function CTASection({
                     gold ? "text-navy-950/70" : "text-white/50"
                   }`}
                 >
-                  <MapPin size={13} /> Vyasarpadi, Chennai - 600039 · Mon-Sun 9AM-8PM
+                  <MapPin size={13} /> Chennai - 600039 · Mon-Sun 9AM-8PM
                 </p>
               </div>
             </div>

@@ -64,7 +64,7 @@ export default function AboutPage() {
             <Reveal delay={0.1}>
               <div className="space-y-5 text-[15px] leading-relaxed text-graphite">
                 <p>
-                  Royal Builders was founded in <strong className="text-navy-900">Vyasarpadi, Chennai, in 2010</strong>{" "}
+                  Royal Builders was founded in <strong className="text-navy-900">Chennai, in 2010</strong>{" "}
                   with a single mission - to make premium construction honest, transparent and accessible to
                   every family. What began as a small team of engineers and craftsmen has grown into one of
                   North Chennai&apos;s most trusted names in construction and real estate.

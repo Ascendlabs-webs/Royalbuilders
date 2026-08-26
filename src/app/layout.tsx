@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "construction company Chennai",
     "house construction cost Chennai",
     "interior designers Chennai",
-    "real estate Vyasarpadi",
+    "real estate",
     "land for sale North Chennai",
     "building maintenance Chennai",
     "modular kitchen Chennai",
@@ -99,7 +99,7 @@ const jsonLd = {
   founder: { "@type": "Person", name: "R. Sekaran" },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "No.754/1007, BV Colony, 23rd Street, Vyasarpadi",
+    streetAddress: "No.754/1007, BV Colony, 23rd Street,",
     addressLocality: "Chennai",
     addressRegion: "Tamil Nadu",
     postalCode: "600039",

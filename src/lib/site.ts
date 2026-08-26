@@ -6,10 +6,10 @@ export const SITE = {
   phoneRaw: "919840951292",
   whatsapp: "919840951292",
   email: "RoyalBuilders3924@gmail.com",
-  address: "No.754/1007, BV Colony, 23rd Street, Vyasarpadi, Chennai - 600039",
+  address: "No.754/1007, BV Colony, 23rd Street, Chennai - 600039",
   addressLines: [
     "No.754/1007, BV Colony,",
-    "23rd Street, Vyasarpadi,",
+    "23rd Street, Chennai,",
     "Chennai - 600039",
   ],
   city: "Chennai",
@@ -17,16 +17,16 @@ export const SITE = {
   country: "India",
   established: 2010,
   mapEmbed:
-    "https://www.google.com/maps?q=No.754%2F1007%2C%20BV%20Colony%2C%2023rd%20Street%2C%20Vyasarpadi%2C%20Chennai%20600039&output=embed",
+    "https://www.google.com/maps?q=No.754%2F1007%2C%20BV%20Colony%2C%2023rd%20Street%2C%20Chennai%20600039&output=embed",
   mapLink:
-    "https://www.google.com/maps/search/?api=1&query=No.754%2F1007%2C+BV+Colony%2C+23rd+Street%2C+Vyasarpadi%2C+Chennai+600039",
+    "https://www.google.com/maps/search/?api=1&query=No.754%2F1007%2C+BV+Colony%2C+23rd+Street%2C+Chennai+600039",
   hours: "Mon - Sun, 9:00 AM - 8:00 PM",
   socials: {
     facebook: "https://facebook.com/royalbuilderschennai",
     instagram: "https://instagram.com/royalbuilderschennai",
     youtube: "https://youtube.com/@royalbuilderschennai",
     whatsapp: "https://wa.me/919840951292",
-    gmb: "https://www.google.com/maps/search/?api=1&query=Royal+Group+Vyasarpadi+Chennai",
+    gmb: "https://www.google.com/maps/search/?api=1&query=Royal+Builders+Chennai",
   },
   url: "https://royalgroupchennai.com",
 } as const;

@@ -145,7 +145,7 @@ export default function RealEstatePage() {
                   Prime Corridors We Serve
                 </p>
                 <p className="font-display mt-3 text-2xl leading-snug font-bold text-white">
-                  Vyasarpadi · Perambur · Manali · Thiruvottiyur · Ambattur
+                  · Perambur · Manali · Thiruvottiyur · Ambattur
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-white/60">
                   Every parcel is verified for clear title, encumbrance and development feasibility before
@@ -172,7 +172,7 @@ export default function RealEstatePage() {
             <div className="crimson-hairline overflow-hidden">
               <iframe
                 src={SITE.mapEmbed}
-                title="Royal Builders office location map - Vyasarpadi, Chennai"
+                title="Royal Builders office location map - Chennai"
                 className="h-[420px] w-full grayscale-[35%]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

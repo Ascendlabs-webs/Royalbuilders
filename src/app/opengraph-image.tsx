@@ -108,7 +108,7 @@ export default function OpengraphImage() {
         >
           <span>+91 98409 51292</span>
           <span>{SITE.email}</span>
-          <span>Vyasarpadi, Chennai - 600039</span>
+          <span>Chennai - 600039</span>
         </div>
       </div>
     ),

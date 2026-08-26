@@ -9,7 +9,7 @@ import { SITE, PHONE_HREF, WHATSAPP_HREF, waLink } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact Royal Builders, Chennai - No.754/1007, BV Colony, 23rd Street, Vyasarpadi, Chennai 600039. Call +91 98409 51292 or email RoyalBuilders3924@gmail.com for a free consultation and site visit.",
+    "Contact Royal Builders, Chennai - No.754/1007, BV Colony, 23rd Street, Chennai 600039. Call +91 98409 51292 or email RoyalBuilders3924@gmail.com for a free consultation and site visit.",
 };
 
 const contactJsonLd = {
@@ -149,13 +149,13 @@ export default function ContactPage() {
                 Find Us on the <span className="text-gradient-crimson">Map</span>
               </>
             }
-            subtitle={`${SITE.address} - easy access from Vyasarpadi Jeeva station.`}
+            subtitle={`${SITE.address} - easy access from Jeeva station.`}
           />
           <Reveal>
             <div className="crimson-hairline overflow-hidden bg-white p-2 shadow-card">
               <iframe
                 src={SITE.mapEmbed}
-                title="Royal Builders office - No.754/1007, BV Colony, 23rd Street, Vyasarpadi, Chennai 600039"
+                title="Royal Builders office - No.754/1007, BV Colony, 23rd Street, Chennai 600039"
                 className="h-[480px] w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
