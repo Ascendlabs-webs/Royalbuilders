@@ -34,7 +34,7 @@ export default function Preloader() {
               style={{ background: "radial-gradient(circle, rgba(196,30,42,0.25), transparent 70%)" }}
             />
             <motion.img
-              src="/logo.svg"
+              src="/logo.png"
               alt=""
               className="relative h-24 w-24 object-contain"
               animate={{ scale: [0.9, 1.05, 0.9], rotate: [0, 360] }}

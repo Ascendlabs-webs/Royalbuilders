@@ -74,7 +74,7 @@ export default function Navbar() {
           <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 lg:px-8">
             <Link href="/" className="group flex items-center gap-3 py-4">
               <img
-                src="/logo-mark-white.svg"
+                src="/logo-mark-white.png"
                 alt="Royal Builders Logo"
                 className="h-11 w-11 transition-transform duration-500 group-hover:scale-105"
               />
@@ -225,7 +225,7 @@ export default function Navbar() {
               transition={{ type: "tween", duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
             >
               <div className="flex items-center gap-3 border-b border-white/10 px-6 py-5">
-                <img src="/logo.svg" alt="" className="h-10 w-10" />
+                <img src="/logo.png" alt="" className="h-10 w-10" />
                 <span className="font-display text-lg font-bold text-white">
                   Royal <span className="text-crimson-500">Builders</span>
                 </span>
