@@ -9,13 +9,13 @@ import { SITE, PHONE_HREF, WHATSAPP_HREF, waLink } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact Royal Group, Chennai - No.754/1007, BV Colony, 23rd Street, Vyasarpadi, Chennai 600039. Call +91 98409 51292 or email RoyalBuilders3924@gmail.com for a free consultation and site visit.",
+    "Contact Royal Builders, Chennai - No.754/1007, BV Colony, 23rd Street, Vyasarpadi, Chennai 600039. Call +91 98409 51292 or email RoyalBuilders3924@gmail.com for a free consultation and site visit.",
 };
 
 const contactJsonLd = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contact Royal Group",
+  name: "Contact Royal Builders",
 };
 
 export default function ContactPage() {
@@ -126,7 +126,7 @@ export default function ContactPage() {
                     <Phone size={14} /> Call Now
                   </a>
                   <a
-                    href={waLink("Hello Royal Group, I found your website and would like to discuss a project.")}
+                    href={waLink("Hello Royal Builders, I found your website and would like to discuss a project.")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-1 items-center justify-center gap-2 bg-[#25D366] px-6 py-4 text-[11px] font-bold tracking-[0.2em] text-white uppercase transition-all duration-300 hover:opacity-85"
@@ -155,7 +155,7 @@ export default function ContactPage() {
             <div className="crimson-hairline overflow-hidden bg-white p-2 shadow-card">
               <iframe
                 src={SITE.mapEmbed}
-                title="Royal Group office - No.754/1007, BV Colony, 23rd Street, Vyasarpadi, Chennai 600039"
+                title="Royal Builders office - No.754/1007, BV Colony, 23rd Street, Vyasarpadi, Chennai 600039"
                 className="h-[480px] w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

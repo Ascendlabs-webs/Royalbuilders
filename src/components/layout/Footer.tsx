@@ -22,7 +22,7 @@ export default function Footer() {
               <img src="/logo-mark-white.svg" alt="Royal Builders Logo" className="h-14 w-14" />
               <span className="leading-tight">
                 <span className="font-display block text-xl font-bold">
-                  Royal <span className="text-crimson-500">Group</span>
+                  Royal <span className="text-crimson-500">Builders</span>
                 </span>
                 <span className="block text-[10px] tracking-[0.35em] text-white/40 uppercase">
                   Building Dreams Since 2010
@@ -139,7 +139,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/40 md:flex-row">
-          <p>© {new Date().getFullYear()} Royal Group. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Royal Builders. All rights reserved.</p>
           <p className="tracking-[0.25em] uppercase">Construction · Interiors · Real Estate · Maintenance</p>
         </div>
       </div>

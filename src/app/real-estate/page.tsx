@@ -11,7 +11,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Real Estate & Land",
   description:
-    "Residential land, commercial property and investment plots in North Chennai with complete legal verification. Buy, sell or consult with Royal Group's trusted real estate team.",
+    "Residential land, commercial property and investment plots in North Chennai with complete legal verification. Buy, sell or consult with Royal Builders's trusted real estate team.",
 };
 
 export default function RealEstatePage() {
@@ -172,7 +172,7 @@ export default function RealEstatePage() {
             <div className="crimson-hairline overflow-hidden">
               <iframe
                 src={SITE.mapEmbed}
-                title="Royal Group office location map - Vyasarpadi, Chennai"
+                title="Royal Builders office location map - Vyasarpadi, Chennai"
                 className="h-[420px] w-full grayscale-[35%]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

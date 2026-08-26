@@ -36,7 +36,7 @@ export default function FloatingButtons() {
       <a
         href={PHONE_HREF}
         className="group flex h-12 w-12 items-center justify-center border border-crimson-500/60 bg-navy-900 text-crimson-400 shadow-lg transition-all duration-300 hover:bg-crimson-500 hover:text-navy-950"
-        aria-label="Call Royal Group"
+        aria-label="Call Royal Builders"
       >
         <Phone size={20} className="animate-pulse-crimson transition-transform duration-300 group-hover:rotate-12" />
       </a>

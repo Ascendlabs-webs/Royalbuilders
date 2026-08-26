@@ -11,7 +11,7 @@ const SLIDES = [
   {
     kicker: "Construction",
     title: "We Build Your Dream Home",
-    sub: "Royal Group is your trusted partner for Construction, Interior Design, Real Estate, and Building Maintenance across Chennai.",
+    sub: "Royal Builders is your trusted partner for Construction, Interior Design, Real Estate, and Building Maintenance across Chennai.",
     image: "/images/hero-construction.jpg",
     href: "/construction",
   },

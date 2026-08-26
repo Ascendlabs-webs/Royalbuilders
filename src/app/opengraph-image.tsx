@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Royal Group - Building Dreams Since 2010";
+export const alt = "Royal Builders - Building Dreams Since 2010";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -64,7 +64,7 @@ export default function OpengraphImage() {
           >
             RG
           </div>
-          Royal Group
+          Royal Builders
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 22, color: "#C41E2A", letterSpacing: 10, textTransform: "uppercase", marginBottom: 16 }}>

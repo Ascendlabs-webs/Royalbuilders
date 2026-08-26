@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Interior Design",
   description:
-    "Premium interior solutions in Chennai - modular kitchens, luxury wardrobes, TV units, false ceilings, profile lighting and wall panels. Free design consultation from Royal Group.",
+    "Premium interior solutions in Chennai - modular kitchens, luxury wardrobes, TV units, false ceilings, profile lighting and wall panels. Free design consultation from Royal Builders.",
 };
 
 const galleryItems = [
@@ -218,7 +218,7 @@ export default function InteriorsPage() {
               <div className="corner-frame relative hidden p-4 lg:block">
                 <img
                   src="/images/interior-bedroom-1.jpg"
-                  alt="Bedroom interior design by Royal Group"
+                  alt="Bedroom interior design by Royal Builders"
                   loading="lazy"
                   className="h-[420px] w-full object-cover"
                 />

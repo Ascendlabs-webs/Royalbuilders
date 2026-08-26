@@ -12,15 +12,15 @@ import { TIMELINE, VALUES, TEAM, CERTIFICATES, ACHIEVEMENTS } from "@/data/site-
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Royal Group - a Chennai construction and real estate company since 2010. Our story, mission, vision, values, certified achievements and the team behind 250+ delivered projects.",
+    "Royal Builders - a Chennai construction and real estate company since 2010. Our story, mission, vision, values, certified achievements and the team behind 250+ delivered projects.",
 };
 
 const aboutJsonLd = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  name: "About Royal Group",
+  name: "About Royal Builders",
   description:
-    "Royal Group is a Chennai-based construction, interiors, real estate and building maintenance company founded in 2010.",
+    "Royal Builders is a Chennai-based construction, interiors, real estate and building maintenance company founded in 2010.",
 };
 
 export default function AboutPage() {
@@ -35,7 +35,7 @@ export default function AboutPage() {
             Since 2010 - <span className="text-gradient-crimson">A Legacy of Architectural Excellence</span>
           </>
         }
-        subtitle="For over a decade, Royal Group has been synonymous with uncompromising quality, structural integrity and visionary design. We build not just structures, but enduring landmarks that define modern luxury."
+        subtitle="For over a decade, Royal Builders has been synonymous with uncompromising quality, structural integrity and visionary design. We build not just structures, but enduring landmarks that define modern luxury."
         image="/images/about-office.jpg"
       />
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
             <div className="corner-frame p-3">
               <ParallaxImage
                 src="/images/about-blueprint.jpg"
-                alt="Architectural blueprint of a Royal Group project"
+                alt="Architectural blueprint of a Royal Builders project"
                 className="h-[400px] md:h-[500px]"
                 speed={0.12}
               />
@@ -64,7 +64,7 @@ export default function AboutPage() {
             <Reveal delay={0.1}>
               <div className="space-y-5 text-[15px] leading-relaxed text-graphite">
                 <p>
-                  Royal Group was founded in <strong className="text-navy-900">Vyasarpadi, Chennai, in 2010</strong>{" "}
+                  Royal Builders was founded in <strong className="text-navy-900">Vyasarpadi, Chennai, in 2010</strong>{" "}
                   with a single mission - to make premium construction honest, transparent and accessible to
                   every family. What began as a small team of engineers and craftsmen has grown into one of
                   North Chennai&apos;s most trusted names in construction and real estate.
@@ -220,7 +220,7 @@ export default function AboutPage() {
             kicker="Meet The Team"
             title={
               <>
-                The People Behind <span className="text-gradient-crimson">Royal Group</span>
+                The People Behind <span className="text-gradient-crimson">Royal Builders</span>
               </>
             }
             subtitle="Engineers, designers and project leaders with one shared obsession - doing the job right."

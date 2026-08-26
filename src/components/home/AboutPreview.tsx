@@ -17,7 +17,7 @@ export default function AboutPreview() {
           <div className="corner-frame relative p-3">
             <ParallaxImage
               src="/images/about-office.jpg"
-              alt="Royal Group office and tower construction"
+              alt="Royal Builders office and tower construction"
               className="h-[420px] md:h-[560px]"
               speed={0.12}
             />
@@ -42,7 +42,7 @@ export default function AboutPreview() {
               A Legacy of <span className="text-gradient-crimson">Architectural Excellence</span> Since 2010
             </h2>
             <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-graphite">
-              For over a decade, Royal Group has been synonymous with uncompromising quality, structural
+              For over a decade, Royal Builders has been synonymous with uncompromising quality, structural
               integrity and visionary design. We build not just structures, but enduring landmarks that
               define modern luxury - trusted by hundreds of satisfied clients across Chennai.
             </p>

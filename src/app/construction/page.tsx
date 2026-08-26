@@ -19,7 +19,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Construction Services",
   description:
-    "House construction in Chennai from ₹2,200/sq.ft. Villas, apartments, commercial buildings, joint ventures and structural design by Royal Group - free site visit, transparent pricing, on-time delivery since 2010.",
+    "House construction in Chennai from ₹2,200/sq.ft. Villas, apartments, commercial buildings, joint ventures and structural design by Royal Builders - free site visit, transparent pricing, on-time delivery since 2010.",
 };
 
 const faqJsonLd = {
@@ -228,7 +228,7 @@ export default function ConstructionPage() {
             <div className="sticky top-28 overflow-hidden border border-crimson-500/40">
               <img
                 src="/images/construction-villa-1.jpg"
-                alt="Luxury villa constructed by Royal Group"
+                alt="Luxury villa constructed by Royal Builders"
                 loading="lazy"
                 className="h-72 w-full object-cover"
               />

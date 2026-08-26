@@ -15,9 +15,9 @@ import { GALLERY_ITEMS, GALLERY_FILTERS, TESTIMONIALS } from "@/data/site-data";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Royal Group | Construction, Interiors, Real Estate & Maintenance in Chennai",
+  title: "Royal Builders | Construction, Interiors, Real Estate & Maintenance in Chennai",
   description:
-    "Royal Group - Chennai's trusted construction and real estate company since 2010. Premium house construction from ₹2,200/sq.ft, luxury interiors, verified land plots and professional building maintenance. Call +91 98409 51292 for a free site visit.",
+    "Royal Builders - Chennai's trusted construction and real estate company since 2010. Premium house construction from ₹2,200/sq.ft, luxury interiors, verified land plots and professional building maintenance. Call +91 98409 51292 for a free site visit.",
   alternates: { canonical: SITE.url },
 };
 
@@ -30,15 +30,15 @@ const faqJsonLd = {
       name: "How much does house construction cost in Chennai?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Royal Group's construction packages start at ₹2,200/sq.ft for Basic and go up to ₹2,800/sq.ft for Luxury, with transparent BOQs and no hidden charges.",
+        text: "Royal Builders's construction packages start at ₹2,200/sq.ft for Basic and go up to ₹2,800/sq.ft for Luxury, with transparent BOQs and no hidden charges.",
       },
     },
     {
       "@type": "Question",
-      name: "Does Royal Group provide free site visits?",
+      name: "Does Royal Builders provide free site visits?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Royal Group offers free site visits and consultations across Chennai. Call +91 98409 51292 to schedule one.",
+        text: "Yes. Royal Builders offers free site visits and consultations across Chennai. Call +91 98409 51292 to schedule one.",
       },
     },
   ],

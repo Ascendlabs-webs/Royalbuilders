@@ -20,7 +20,7 @@ export default function WhyChoose() {
           kicker="The Royal Standard"
           title={
             <>
-              Why Choose <span className="text-gradient-crimson">Royal Group?</span>
+              Why Choose <span className="text-gradient-crimson">Royal Builders?</span>
             </>
           }
           subtitle="Eight promises we make to every client - and have kept for over a decade."

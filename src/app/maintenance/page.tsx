@@ -56,7 +56,7 @@ export default function MaintenancePage() {
             <Phone size={15} /> Emergency: +91 98409 51292
           </a>
           <a
-            href={waLink("Hello Royal Group, I need emergency building maintenance service.")}
+            href={waLink("Hello Royal Builders, I need emergency building maintenance service.")}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 border border-white/50 px-8 py-4 text-[12px] font-bold tracking-[0.2em] text-white uppercase backdrop-blur transition-all duration-300 hover:border-crimson-500 hover:bg-crimson-500 hover:text-navy-950"
@@ -99,7 +99,7 @@ export default function MaintenancePage() {
                     </h3>
                     <p className="mt-2 flex-1 text-xs leading-relaxed text-graphite">{s.description}</p>
                     <a
-                      href={waLink(`Hello Royal Group, I would like to book "${s.title}" service.`)}
+                      href={waLink(`Hello Royal Builders, I would like to book "${s.title}" service.`)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-5 inline-flex items-center gap-2 border-b border-crimson-500 pb-1 text-[10px] font-bold tracking-[0.25em] text-crimson-600 uppercase transition-colors hover:text-navy-900"
@@ -160,7 +160,7 @@ export default function MaintenancePage() {
                     ))}
                   </ul>
                   <a
-                    href={waLink(`Hello Royal Group, I'm interested in the ${plan.name} AMC package.`)}
+                    href={waLink(`Hello Royal Builders, I'm interested in the ${plan.name} AMC package.`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`mt-8 flex items-center justify-center gap-2 border px-6 py-3.5 text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 ${

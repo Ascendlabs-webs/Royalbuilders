@@ -80,7 +80,7 @@ export default function Navbar() {
               />
               <span className="leading-tight">
                 <span className="font-display block text-lg font-bold tracking-wide text-white">
-                  Royal <span className="text-crimson-500">Group</span>
+                  Royal <span className="text-crimson-500">Builders</span>
                 </span>
                 <span className="block text-[9px] tracking-[0.35em] text-white/50 uppercase">
                   Building Dreams Since 2010
@@ -227,7 +227,7 @@ export default function Navbar() {
               <div className="flex items-center gap-3 border-b border-white/10 px-6 py-5">
                 <img src="/logo.svg" alt="" className="h-10 w-10" />
                 <span className="font-display text-lg font-bold text-white">
-                  Royal <span className="text-crimson-500">Group</span>
+                  Royal <span className="text-crimson-500">Builders</span>
                 </span>
               </div>
               <nav className="flex flex-col px-4 py-6" aria-label="Mobile navigation">

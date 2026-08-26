@@ -38,7 +38,7 @@ export default function LeadForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `*New Inquiry - Royal Group Website*%0A%0A` +
+    const text = `*New Inquiry - Royal Builders Website*%0A%0A` +
       `*Name:* ${form.name}%0A*Phone:* ${form.phone}%0A*Email:* ${form.email || "-"}%0A*Service:* ${form.service || "-"}%0A*Message:* ${form.message || "-"}`;
     window.open(waLink(decodeURIComponent(text)).replace("%0A", "\n"), "_blank");
     setSubmitted(true);
@@ -65,7 +65,7 @@ export default function LeadForm({
           hours. For urgent requirements, call us directly at +91 98409 51292.
         </p>
         <a
-          href={waLink("Hello Royal Group, I just submitted an inquiry on your website.")}
+          href={waLink("Hello Royal Builders, I just submitted an inquiry on your website.")}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 flex items-center gap-2 border border-crimson-500/60 px-6 py-3 text-[11px] font-bold tracking-[0.2em] text-crimson-500 uppercase transition-colors hover:bg-crimson-500 hover:text-navy-950"

@@ -27,11 +27,11 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Royal Group | Construction, Interiors, Real Estate & Maintenance in Chennai",
-    template: "%s | Royal Group Chennai",
+    default: "Royal Builders | Construction, Interiors, Real Estate & Maintenance in Chennai",
+    template: "%s | Royal Builders Chennai",
   },
   description:
-    "Royal Group - Chennai's trusted construction and real estate company since 2010. Premium house construction from ₹2,200/sq.ft, luxury interiors, verified land plots and professional building maintenance in Chennai.",
+    "Royal Builders - Chennai's trusted construction and real estate company since 2010. Premium house construction from ₹2,200/sq.ft, luxury interiors, verified land plots and professional building maintenance in Chennai.",
   keywords: [
     "construction company Chennai",
     "house construction cost Chennai",
@@ -42,21 +42,21 @@ export const metadata: Metadata = {
     "modular kitchen Chennai",
     "villa construction Chennai",
   ],
-  authors: [{ name: "Royal Group", url: SITE.url }],
-  creator: "Royal Group",
+  authors: [{ name: "Royal Builders", url: SITE.url }],
+  creator: "Royal Builders",
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: SITE.url,
-    siteName: "Royal Group",
-    title: "Royal Group | Building Dreams Since 2010",
+    siteName: "Royal Builders",
+    title: "Royal Builders | Building Dreams Since 2010",
     description:
       "Construction, Interior Design, Real Estate & Building Maintenance across Chennai. Free consultation & site visit - call +91 98409 51292.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Royal Group - Building Dreams Since 2010" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Royal Builders - Building Dreams Since 2010" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Royal Group | Building Dreams Since 2010",
+    title: "Royal Builders | Building Dreams Since 2010",
     description: "Construction, Interiors, Real Estate & Maintenance - trusted across Chennai since 2010.",
     images: ["/opengraph-image"],
   },
@@ -88,10 +88,10 @@ export const viewport: Viewport = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
-  name: "Royal Group",
+  name: "Royal Builders",
   alternateName: "Royal Builders",
   description:
-    "Royal Group is a Chennai-based construction and real estate company offering house construction, interior design, land sales and building maintenance since 2010.",
+    "Royal Builders is a Chennai-based construction and real estate company offering house construction, interior design, land sales and building maintenance since 2010.",
   url: SITE.url,
   telephone: "+919840951292",
   email: SITE.email,

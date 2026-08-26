@@ -47,7 +47,7 @@ export default function Preloader() {
             animate={{ opacity: 1, letterSpacing: "0.3em" }}
             transition={{ duration: 1.2, delay: 0.3 }}
           >
-            Royal Group
+            Royal Builders
           </motion.p>
           <motion.div className="mt-6 h-px w-40 overflow-hidden bg-navy-800">
             <motion.div

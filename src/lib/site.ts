@@ -1,6 +1,6 @@
 export const SITE = {
-  name: "Royal Group",
-  legalName: "Royal Group - Construction & Real Estate",
+  name: "Royal Builders",
+  legalName: "Royal Builders - Construction & Real Estate",
   tagline: "Building Dreams Since 2010",
   phoneDisplay: "+91 98409 51292",
   phoneRaw: "919840951292",
@@ -33,7 +33,7 @@ export const SITE = {
 
 export const PHONE_HREF = `tel:+${SITE.phoneRaw}`;
 export const WHATSAPP_HREF = `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(
-  "Hello Royal Group, I would like a free consultation for my project."
+  "Hello Royal Builders, I would like a free consultation for my project."
 )}`;
 
 export function waLink(message: string) {

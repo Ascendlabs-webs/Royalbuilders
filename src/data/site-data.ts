@@ -132,7 +132,7 @@ export const TIMELINE = [
     year: "2010",
     title: "The Foundation",
     description:
-      "Royal Group is founded in Vyasarpadi, Chennai, with a vision to redefine urban landscapes through structural reliability and honest craftsmanship.",
+      "Royal Builders is founded in Vyasarpadi, Chennai, with a vision to redefine urban landscapes through structural reliability and honest craftsmanship.",
   },
   {
     year: "2013",
@@ -173,7 +173,7 @@ export const TESTIMONIALS = [
     rating: 5,
     service: "Construction - Individual House",
     date: "2 months ago",
-    text: "Royal Group built our 2400 sq.ft home in Perambur exactly on schedule and within the quoted budget. The team was transparent at every stage - weekly photo updates, clear billing. Truly professional.",
+    text: "Royal Builders built our 2400 sq.ft home in Perambur exactly on schedule and within the quoted budget. The team was transparent at every stage - weekly photo updates, clear billing. Truly professional.",
   },
   {
     name: "Lakshmi Narayanan",
@@ -189,7 +189,7 @@ export const TESTIMONIALS = [
     rating: 5,
     service: "Real Estate - Land Purchase",
     date: "3 months ago",
-    text: "I bought a plot in Vyasarpadi through Royal Group. Complete legal verification was done - encumbrance, title documents, everything. They even helped with the registration. Zero stress.",
+    text: "I bought a plot in Vyasarpadi through Royal Builders. Complete legal verification was done - encumbrance, title documents, everything. They even helped with the registration. Zero stress.",
   },
   {
     name: "Priya Raman",
