@@ -220,28 +220,18 @@ export const TESTIMONIALS = [
 export const GALLERY_FILTERS = [
   "All",
   "Construction",
-  "Interior",
-  "Kitchen",
-  "Wardrobe",
-  "Ceiling",
   "Villa",
   "Apartment",
-  "Maintenance",
 ] as const;
 
 export const GALLERY_ITEMS = [
-  { src: "/images/construction-site-1.jpg", category: "Construction", title: "RCC Structure Works", span: "tall" },
-  { src: "/images/interior-kitchen-1.jpg", category: "Kitchen", title: "Modular Kitchen", span: "wide" },
-  { src: "/images/interior-wardrobe-1.jpg", category: "Wardrobe", title: "Walk-in Wardrobe" },
-  { src: "/images/construction-villa-1.jpg", category: "Villa", title: "Luxury Villa" },
-  { src: "/images/interior-ceiling-1.jpg", category: "Ceiling", title: "False Ceiling Design" },
-  { src: "/images/land-aerial-1.jpg", category: "Apartment", title: "Apartment Development" },
-  { src: "/images/interior-living-1.jpg", category: "Interior", title: "Living Room" },
-  { src: "/images/maintenance-cleaning.jpg", category: "Maintenance", title: "Deep Cleaning" },
-  { src: "/images/construction-commercial-1.jpg", category: "Construction", title: "Commercial Build" },
-  { src: "/images/interior-wardrobe-2.jpg", category: "Wardrobe", title: "Luxury Wardrobe" },
-  { src: "/images/construction-apartment-1.jpg", category: "Apartment", title: "Apartment Interiors" },
-  { src: "/images/maintenance-painting.jpg", category: "Maintenance", title: "Wall Painting" },
+  { src: "/images/project-1.jpg", category: "Construction", title: "1400 Sq.Ft F+G+2 Residence - Vyasarpadi", span: "tall" },
+  { src: "/images/project-2.jpg", category: "Apartment", title: "550 Sq.Ft 2BHK Home - Vyasarpadi", span: "wide" },
+  { src: "/images/project-3.jpg", category: "Villa", title: "550 Sq.Ft Compact Villa - Vyasarpadi" },
+  { src: "/images/project-4.jpg", category: "Construction", title: "1200 Sq.Ft 7-Portion Complex - Vyasarpadi" },
+  { src: "/images/project-5.jpg", category: "Villa", title: "1400 Sq.Ft Family Home - Vyasarpadi" },
+  { src: "/images/project-6.jpg", category: "Construction", title: "450 Sq.Ft G+1 Home - Vyasarpadi" },
+  { src: "/images/project-7.jpg", category: "Apartment", title: "1200 Sq.Ft Multi-Unit Building - Vyasarpadi" },
 ] as const;
 
 export const CONSTRUCTION_PACKAGES = [
