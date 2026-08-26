@@ -39,7 +39,7 @@ export const SERVICES = [
     tagline: "Premium Interior Solutions",
     description:
       "Elevating spaces with meticulous craftsmanship and visionary design. From conceptual layouts to the final luxurious finishes.",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1200&q=80",
     features: [
       "Modular Kitchens",
       "Wardrobes & TV Units",
