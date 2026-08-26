@@ -74,8 +74,8 @@ export default function Navbar() {
           <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 lg:px-8">
             <Link href="/" className="group flex items-center gap-3 py-4">
               <img
-                src="/logo.svg"
-                alt="Royal Group Logo"
+                src="/logo-mark-white.svg"
+                alt="Royal Builders Logo"
                 className="h-11 w-11 transition-transform duration-500 group-hover:scale-105"
               />
               <span className="leading-tight">

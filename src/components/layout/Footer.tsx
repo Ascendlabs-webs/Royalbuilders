@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Link href="/" className="flex items-center gap-3">
-              <img src="/logo.svg" alt="Royal Group Logo" className="h-14 w-14" />
+              <img src="/logo-mark-white.svg" alt="Royal Builders Logo" className="h-14 w-14" />
               <span className="leading-tight">
                 <span className="font-display block text-xl font-bold">
                   Royal <span className="text-crimson-500">Group</span>
