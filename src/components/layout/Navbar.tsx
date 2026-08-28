@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, Menu, X, ChevronDown, ArrowRight, Clock } from "lucide-react";
+import Image from "next/image";
 import { NAV_LINKS } from "@/data/site-data";
 import { SITE, PHONE_HREF } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -181,10 +182,13 @@ export default function Navbar() {
                         className="group block overflow-hidden border border-white/10 transition-all duration-500 hover:border-crimson-500/60 hover:shadow-crimson"
                       >
                         <div className="relative h-36 overflow-hidden">
-                          <img
+                          <Image
                             src={s.image}
                             alt={s.label}
-                            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            fill
+                            sizes="100vw"
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                            priority={false}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent" />
                         </div>
