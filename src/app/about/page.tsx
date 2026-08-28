@@ -44,7 +44,7 @@ export default function AboutPage() {
           <Reveal direction="right" className="relative lg:col-span-5">
             <div className="corner-frame p-3">
               <ParallaxImage
-                src="/images/about-blueprint.jpg"
+                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=80"
                 alt="Architectural blueprint of a Royal Builders project"
                 className="h-[400px] md:h-[500px]"
                 speed={0.12}
