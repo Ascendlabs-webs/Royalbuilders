@@ -35,6 +35,22 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
+  // Close mega menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (
+        megaOpen &&
+        !target.closest("[aria-haspopup='true']") &&
+        !target.closest("[data-mega-menu]")
+      ) {
+        setMegaOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [megaOpen]);
+
   const servicesMega = NAV_LINKS.find((l) => l.mega);
 
   return (
@@ -108,6 +124,10 @@ export default function Navbar() {
                       )}
                       aria-expanded={megaOpen}
                       aria-haspopup="true"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setMegaOpen((v) => !v);
+                      }}
                     >
                       {link.label}
                       <ChevronDown
@@ -167,6 +187,7 @@ export default function Navbar() {
                 className="absolute inset-x-0 top-full border-b border-crimson-500/20 glass-dark"
                 onMouseEnter={() => setMegaOpen(true)}
                 onMouseLeave={() => setMegaOpen(false)}
+                data-mega-menu
               >
                 <div className="mx-auto grid max-w-[1400px] grid-cols-4 gap-6 px-8 py-10">
                   {servicesMega.mega.map((s, i) => (
