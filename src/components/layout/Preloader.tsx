@@ -8,12 +8,20 @@ export default function Preloader() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setDone(true), 2200);
-    const t2 = setTimeout(() => setHidden(true), 3400);
-    return () => {
-      clearTimeout(t);
-      clearTimeout(t2);
-    };
+    // Skip preloader on mobile devices (faster perceived load) and slow connections
+    if (typeof window !== "undefined") {
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+      const slowConnection =
+        (navigator as any).connection?.effectiveType === "2g" ||
+        (navigator as any).connection?.effectiveType === "3g";
+      const duration = isMobile ? 800 : 2200;
+      const t = setTimeout(() => setDone(true), duration);
+      const t2 = setTimeout(() => setHidden(true), duration + 1200);
+      return () => {
+        clearTimeout(t);
+        clearTimeout(t2);
+      };
+    }
   }, []);
 
   return (

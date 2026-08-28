@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function SmoothScroll() {
   useEffect(() => {
+    // Skip smooth scroll on mobile/touch devices - native scroll is faster
+    if (window.matchMedia("(max-width: 1024px)").matches) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     const lenis = new Lenis({

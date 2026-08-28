@@ -88,7 +88,7 @@ export default function HeroSlider() {
   const slide = SLIDES[index];
 
   return (
-    <section ref={sectionRef} className="relative h-screen min-h-[640px] overflow-hidden bg-navy-950">
+    <section ref={sectionRef} className="relative h-[100svh] min-h-[560px] overflow-hidden bg-navy-950">
       <div ref={slidesRef} className="absolute inset-0">
         {SLIDES.map((s, i) => (
           <div
@@ -119,10 +119,10 @@ export default function HeroSlider() {
         aria-hidden
       />
 
-      <div className="relative z-20 mx-auto flex h-full max-w-[1400px] flex-col justify-center px-6 pb-28 lg:px-8">
+      <div className="relative z-20 mx-auto flex h-full max-w-[1400px] flex-col justify-center px-5 pb-24 sm:px-6 lg:px-8 lg:pb-28">
         <div key={`content-${index}`} className="max-w-3xl">
-          <div className="flex items-center gap-4">
-            <span className="h-px w-14 bg-crimson-500" aria-hidden />
+          <div className="flex items-center gap-3 sm:gap-4">
+            <span className="h-px w-10 sm:w-14 bg-crimson-500" aria-hidden />
             <span
               className={cn(
                 "text-[11px] font-bold tracking-[0.4em] text-crimson-400 uppercase",
@@ -134,7 +134,7 @@ export default function HeroSlider() {
             </span>
           </div>
           <h1
-            className="font-display mt-5 text-5xl leading-[1.05] font-bold text-white sm:text-6xl lg:text-7xl"
+            className="font-display mt-4 sm:mt-5 text-4xl leading-[1.05] font-bold text-white sm:text-6xl lg:text-7xl"
             style={{ animation: reduceMotion ? undefined : "fadeUp 0.9s 0.15s ease both" }}
           >
             {slide.title.split(" ").map((word, i, arr) =>
@@ -148,13 +148,13 @@ export default function HeroSlider() {
             )}
           </h1>
           <p
-            className="mt-6 max-w-xl text-[15px] leading-relaxed text-white/75 md:text-lg"
+            className="mt-5 sm:mt-6 max-w-xl text-sm leading-relaxed text-white/75 sm:text-[15px] md:text-lg"
             style={{ animation: reduceMotion ? undefined : "fadeUp 0.9s 0.3s ease both" }}
           >
             {slide.sub}
           </p>
           <div
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-8 sm:mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4"
             style={{ animation: reduceMotion ? undefined : "fadeUp 0.9s 0.45s ease both" }}
           >
             <Link
@@ -198,7 +198,7 @@ export default function HeroSlider() {
         </button>
       </div>
 
-      <div className="absolute bottom-10 left-6 z-30 flex items-center gap-6 md:left-10">
+      <div className="absolute bottom-6 left-4 z-30 flex items-center gap-4 sm:bottom-10 sm:left-6 md:left-10 sm:gap-6">
         <span className="font-display text-5xl font-bold text-white/90">
           <span className="text-crimson-500">0{index + 1}</span>
           <span className="mx-2 text-2xl text-white/30">/</span>
@@ -216,7 +216,7 @@ export default function HeroSlider() {
         </div>
       </div>
 
-      <div className="absolute bottom-10 right-6 z-30 hidden text-[10px] tracking-[0.4em] text-white/40 uppercase md:right-10 md:block" aria-hidden>
+      <div className="absolute bottom-6 right-4 z-30 hidden text-[10px] tracking-[0.4em] text-white/40 uppercase sm:right-6 sm:bottom-10 md:right-10 md:block" aria-hidden>
         Scroll to explore
         <ChevronDown size={14} className="mx-auto mt-1 animate-bounce text-crimson-500" />
       </div>

@@ -198,7 +198,7 @@ export default function Navbar() {
                 onMouseLeave={scheduleClose}
                 data-mega-menu
               >
-                <div className="mx-auto grid max-w-[1400px] grid-cols-4 gap-6 px-8 py-10">
+                <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-4 sm:grid-cols-2 px-4 py-6 sm:gap-5 sm:px-6 sm:py-8 lg:grid-cols-4 lg:gap-6 lg:px-8 lg:py-10">
                   {servicesMega.mega.map((s, i) => (
                     <motion.div
                       key={s.label}
