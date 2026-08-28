@@ -86,7 +86,7 @@ export default function MaintenancePage() {
                       src={s.image}
                       alt={s.title}
                       loading="lazy"
-                      className="h-full w-full object-cover opacity-90 transition-all duration-700 group-hover:scale-110 group-hover:opacity-100"
+                      className="h-full w-full object-contain opacity-90 transition-all duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 to-transparent" />
                     <span className="absolute bottom-3 left-4 font-display text-2xl font-bold text-crimson-400">
