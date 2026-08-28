@@ -144,6 +144,13 @@ export default function Navbar() {
                         className={cn("transition-transform duration-300", megaOpen && "rotate-180")}
                       />
                     </button>
+                    {/* Invisible bridge to dropdown */}
+                    <div
+                      className="absolute left-0 right-0 top-full h-6"
+                      onMouseEnter={openMega}
+                      onMouseLeave={scheduleClose}
+                      aria-hidden
+                    />
                   </li>
                 ) : (
                   <li key={link.label}>
@@ -208,6 +215,7 @@ export default function Navbar() {
                     >
                       <Link
                         href={s.href}
+                        onClick={() => setMegaOpen(false)}
                         className="group block overflow-hidden border border-white/10 transition-all duration-500 hover:border-crimson-500/60 hover:shadow-crimson"
                       >
                         <div className="relative h-32 overflow-hidden">
