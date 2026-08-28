@@ -114,7 +114,7 @@ export default function Navbar() {
                       setMegaOpen(true);
                     }}
                     onMouseLeave={() => {
-                      setTimeout(() => setMegaOpen(false), 150);
+                      setTimeout(() => setMegaOpen(false), 300);
                     }}
                   >
                     <button
@@ -186,7 +186,9 @@ export default function Navbar() {
                 transition={{ duration: 0.35, ease: [0.65, 0, 0.35, 1] }}
                 className="absolute inset-x-0 top-full border-b border-crimson-500/20 glass-dark"
                 onMouseEnter={() => setMegaOpen(true)}
-                onMouseLeave={() => setMegaOpen(false)}
+                onMouseLeave={() => {
+                  setTimeout(() => setMegaOpen(false), 300);
+                }}
                 data-mega-menu
               >
                 <div className="mx-auto grid max-w-[1400px] grid-cols-4 gap-6 px-8 py-10">
