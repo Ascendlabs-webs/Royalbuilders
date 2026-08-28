@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,6 +14,19 @@ export default function Navbar() {
   const [megaOpen, setMegaOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openMega = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+    setMegaOpen(true);
+  };
+  const scheduleClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setMegaOpen(false), 500);
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -110,12 +123,8 @@ export default function Navbar() {
                   <li
                     key={link.label}
                     className="relative"
-                    onMouseEnter={() => {
-                      setMegaOpen(true);
-                    }}
-                    onMouseLeave={() => {
-                      setTimeout(() => setMegaOpen(false), 300);
-                    }}
+                    onMouseEnter={openMega}
+                    onMouseLeave={scheduleClose}
                   >
                     <button
                       className={cn(
@@ -185,10 +194,8 @@ export default function Navbar() {
                 exit={{ opacity: 0, y: 8 }}
                 transition={{ duration: 0.35, ease: [0.65, 0, 0.35, 1] }}
                 className="absolute inset-x-0 top-full border-b border-crimson-500/20 glass-dark"
-                onMouseEnter={() => setMegaOpen(true)}
-                onMouseLeave={() => {
-                  setTimeout(() => setMegaOpen(false), 300);
-                }}
+                onMouseEnter={openMega}
+                onMouseLeave={scheduleClose}
                 data-mega-menu
               >
                 <div className="mx-auto grid max-w-[1400px] grid-cols-4 gap-6 px-8 py-10">
