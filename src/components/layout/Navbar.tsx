@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, Menu, X, ChevronDown, ArrowRight, Clock } from "lucide-react";
-import Image from "next/image";
 import { NAV_LINKS } from "@/data/site-data";
 import { SITE, PHONE_HREF } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -181,25 +180,25 @@ export default function Navbar() {
                         href={s.href}
                         className="group block overflow-hidden border border-white/10 transition-all duration-500 hover:border-crimson-500/60 hover:shadow-crimson"
                       >
-                        <div className="relative h-36 overflow-hidden">
-                          <Image
+                        <div className="relative h-32 overflow-hidden">
+                          <img
                             src={s.image}
                             alt={s.label}
-                            fill
-                            sizes="100vw"
-                            className="object-cover transition-transform duration-700 group-hover:scale-110"
-                            priority={false}
+                            loading="lazy"
+                            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 to-transparent" />
                         </div>
-                        <div className="flex items-center justify-between bg-navy-900/80 px-4 py-3">
-                          <span className="font-display text-base text-white group-hover:text-crimson-400 transition-colors">
+                        <div className="bg-navy-900/90 px-4 py-3">
+                          <span className="font-display text-sm font-bold text-white group-hover:text-crimson-400 transition-colors">
                             {s.label}
                           </span>
-                          <ArrowRight
-                            size={15}
-                            className="text-crimson-500 transition-transform duration-300 group-hover:translate-x-1"
-                          />
+                          <p className="mt-1 text-[11px] leading-snug text-white/60">
+                            {s.description}
+                          </p>
+                          <span className="mt-2 inline-flex items-center gap-1 text-[10px] font-bold tracking-wider text-crimson-400 uppercase">
+                            Explore <ArrowRight size={11} />
+                          </span>
                         </div>
                       </Link>
                     </motion.div>

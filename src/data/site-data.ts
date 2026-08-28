@@ -1,4 +1,4 @@
-export type MegaItem = { label: string; href: string; image: string };
+export type MegaItem = { label: string; href: string; image: string; description: string };
 export type NavLink = { label: string; href: string; mega?: readonly MegaItem[] };
 
 export const NAV_LINKS: readonly NavLink[] = [
@@ -8,10 +8,30 @@ export const NAV_LINKS: readonly NavLink[] = [
     label: "Services",
     href: "/construction",
     mega: [
-      { label: "Construction", href: "/construction", image: "/images/construction-site-1.jpg" },
-      { label: "Interiors", href: "/interiors", image: "/images/interior-living-1.jpg" },
-      { label: "Real Estate", href: "/real-estate", image: "/images/land-1.jpg" },
-      { label: "Maintenance", href: "/maintenance", image: "/images/maintenance-cleaning.jpg" },
+      {
+        label: "Construction",
+        href: "/construction",
+        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+        description: "Residential & commercial construction from ₹2,200/sq.ft with transparent pricing.",
+      },
+      {
+        label: "Interiors",
+        href: "/interiors",
+        image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
+        description: "Modular kitchens, wardrobes, false ceilings and profile lighting.",
+      },
+      {
+        label: "Real Estate",
+        href: "/real-estate",
+        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+        description: "Legally verified residential & commercial plots across Chennai.",
+      },
+      {
+        label: "Maintenance",
+        href: "/maintenance",
+        image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
+        description: "Building repairs, tank cleaning, plumbing, electrical & AMC services.",
+      },
     ],
   },
   { label: "Projects", href: "/projects" },
