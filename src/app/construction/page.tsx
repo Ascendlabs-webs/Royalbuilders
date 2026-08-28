@@ -37,7 +37,7 @@ const galleryItems = [
   { src: "/images/construction-villa-1.jpg", category: "Villa", title: "Villa Construction", span: "tall" as const },
   { src: "/images/construction-commercial-1.jpg", category: "Construction", title: "Commercial Build" },
   { src: "/images/construction-crane-1.jpg", category: "Construction", title: "Tower Crane Operations" },
-  { src: "/images/construction-apartment-1.jpg", category: "Apartment", title: "Apartment Projects" },
+  { src: "/images/construction-apartment-1.jpg", category: "Apartment", title: "Apartment Projects", span: "tall" as const },
   { src: "/images/construction-structure-1.jpg", category: "Construction", title: "Structural Steel", span: "wide" as const },
 ];
 
