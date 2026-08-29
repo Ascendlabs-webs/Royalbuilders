@@ -676,7 +676,7 @@ export const PROJECT_FILTERS = [
 ] as const;
 
 export const TEAM = [
-  { name: "R. Sekaran", role: "Founder & Managing Director", image: "/images/team-founder.jpg" },
+  { name: "D. Mukhtar", role: "Founder & Managing Director", image: "/images/team-founder.jpg" },
 ] as const;
 
 export const CERTIFICATES = [
