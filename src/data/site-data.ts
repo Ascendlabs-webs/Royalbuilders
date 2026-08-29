@@ -676,12 +676,7 @@ export const PROJECT_FILTERS = [
 ] as const;
 
 export const TEAM = [
-  { name: "R. Sekaran", role: "Founder & Managing Director", image: "/images/team-1.jpg" },
-  { name: "Priya Raman", role: "Head of Interiors", image: "/images/team-2.jpg" },
-  { name: "Karthik Subramani", role: "Chief Engineer", image: "/images/team-3.jpg" },
-  { name: "Meena Krishnan", role: "Legal & Documentation", image: "/images/team-4.jpg" },
-  { name: "Arun Prakash", role: "Projects Director", image: "/images/team-5.jpg" },
-  { name: "Divya Chandran", role: "Design Lead", image: "/images/team-6.jpg" },
+  { name: "R. Sekaran", role: "Founder & Managing Director", image: "/images/team-founder.jpg" },
 ] as const;
 
 export const CERTIFICATES = [
