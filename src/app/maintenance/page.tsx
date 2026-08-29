@@ -114,90 +114,11 @@ export default function MaintenancePage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-navy-950 py-24 lg:py-32">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{ background: "radial-gradient(700px circle at 80% 20%, rgba(196,30,42,0.08), transparent 55%)" }}
-          aria-hidden
-        />
-        <div className="relative mx-auto max-w-[1400px] px-6 lg:px-8">
-          <SectionHeading
-            dark
-            kicker="AMC Packages"
-            title={
-              <>
-                Annual Maintenance <span className="text-gradient-crimson">Contracts</span>
-              </>
-            }
-            subtitle="Set-and-forget care for your home, office or apartment complex - we handle everything."
-          />
-          <div className="grid gap-6 md:grid-cols-3">
-            {AMC_PLANS.map((plan, i) => (
-              <Reveal key={plan.name} delay={0.08 * i} className="h-full">
-                <div
-                  className={`relative flex h-full flex-col border p-9 transition-all duration-500 ${
-                    plan.featured
-                      ? "border-crimson-500 bg-navy-900 shadow-crimson-lg"
-                      : "border-white/10 bg-navy-900/50 hover:border-crimson-500/40"
-                  }`}
-                >
-                  {plan.featured && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-crimson-500 px-4 py-1 text-[9px] font-bold tracking-[0.25em] text-navy-950 uppercase">
-                      Best Value
-                    </span>
-                  )}
-                  <p className="text-[11px] font-bold tracking-[0.3em] text-crimson-400 uppercase">{plan.name}</p>
-                  <p className="font-display mt-3 text-4xl font-bold text-white">
-                    {plan.price}
-                    <span className="ml-2 text-sm font-normal text-white/50">{plan.per}</span>
-                  </p>
-                  <ul className="mt-7 flex-1 space-y-3 border-t border-white/10 pt-6">
-                    {plan.features.map((f) => (
-                      <li key={f} className="flex items-start gap-3 text-sm text-white/70">
-                        <ShieldCheck size={15} className="mt-0.5 shrink-0 text-crimson-500" />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={waLink(`Hello Royal Builders, I'm interested in the ${plan.name} AMC package.`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`mt-8 flex items-center justify-center gap-2 border px-6 py-3.5 text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 ${
-                      plan.featured
-                        ? "border-crimson-500 bg-crimson-500 text-navy-950 hover:bg-transparent hover:text-crimson-400"
-                        : "border-crimson-500/50 text-crimson-400 hover:bg-crimson-500 hover:text-navy-950"
-                    }`}
-                  >
-                    <CalendarCheck size={14} /> Enquire Now
-                  </a>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-
-          <div className="mt-14 grid gap-5 border border-white/10 bg-navy-900/50 p-8 md:grid-cols-3 md:p-10">
-            {[
-              { icon: AlarmClockCheck, text: "24/7 emergency response for plumbing, electrical and leaks" },
-              { icon: ShieldCheck, text: "Insured technicians and genuine spare parts with warranty" },
-              { icon: CalendarCheck, text: "Scheduled visits that never slip - with visit reports" },
-            ].map(({ icon: IconCmp, text }, i) => (
-              <Reveal key={text} delay={0.08 * i}>
-                <div className="flex items-start gap-4">
-                  <IconCmp size={26} className="shrink-0 text-crimson-400" />
-                  <p className="text-sm leading-relaxed text-white/70">{text}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <CTASection
-        variant="gold"
-        title="Emergency? We're On Our Way."
-        subtitle="Leak, short-circuit or blocked drainage? Call our 24/7 maintenance helpline - a technician reaches you within 2 hours across Chennai."
-      />
-    </>
-  );
-}
+              variant="gold"
+              title="Emergency? We're On Our Way."
+              subtitle="Leak, short-circuit or blocked drainage? Call our 24/7 maintenance helpline - a technician reaches you within 2 hours across Chennai."
+            />
+          </>
+        );
+      }

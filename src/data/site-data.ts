@@ -525,7 +525,6 @@ export const MAINTENANCE_SERVICES = [
   { title: "SS Works", image: "/images/maintenance-ss.jpg", description: "SS railings, canopies and custom stainless steel fabrication." },
   { title: "Carpenter Works", image: "/images/maintenance-carpenter.jpg", description: "Doors, cupboards, repairs and custom woodwork." },
   { title: "Wall Painting", image: "/images/maintenance-painting.jpg", description: "Interior and exterior painting with premium brands." },
-  { title: "AMC Services", image: "/images/maintenance-amc.jpg", description: "Annual maintenance contracts for homes, offices and complexes." },
 ] as const;
 
 export type Project = {
