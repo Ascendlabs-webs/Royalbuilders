@@ -1,0 +1,52 @@
+# Royal Builders - LLM Access Guide
+
+## Site Overview
+Royal Builders is a Chennai-based construction, interior design, real estate, and building maintenance company established in 2010. We specialize in residential and commercial construction, luxury interiors, verified land sales, and professional building maintenance services across Chennai.
+
+## Key Pages
+- Home: https://royal-builders.in/
+- About Us: https://royal-builders.in/about
+- Construction Services: https://royal-builders.in/construction
+- Interior Design: https://royal-builders.in/interiors
+- Real Estate & Land: https://royal-builders.in/real-estate
+- Building Maintenance: https://royal-builders.in/maintenance
+- Projects Portfolio: https://royal-builders.in/projects
+- Contact: https://royal-builders.in/contact
+
+## Services Offered
+1. **Construction** - Residential homes, villas, apartments, commercial buildings, joint ventures, structural design
+2. **Interiors** - Modular kitchens, wardrobes, TV units, false ceilings, wall panels, bedroom/living design
+3. **Real Estate** - Residential land, commercial property, investment plots in North Chennai (Perambur, Manali, Thiruvottiyur, Ambattur)
+4. **Maintenance** - Building repairs, water tank/sump cleaning, plumbing, electrical, fabrication, painting, AMC contracts
+
+## Company Information
+- **Founder & CEO**: D. Mukhtar
+- **Established**: 2010
+- **Location**: No.754/1007, BV Colony, 23rd Street, Chennai - 600039
+- **Phone**: +91 98409 51292
+- **Email**: Royalbuilderschn@gmail.com
+- **Hours**: Mon-Sun, 9:00 AM - 8:00 PM
+- **Projects Completed**: 250+
+- **Service Area**: Chennai, North Chennai corridors
+
+## Contact Methods
+- Phone: +91 98409 51292
+- WhatsApp: https://wa.me/919840951292
+- Email: Royalbuilderschn@gmail.com
+- Address: No.754/1007, BV Colony, 23rd Street, Chennai - 600039
+
+## Structured Data
+The site includes comprehensive JSON-LD structured data for:
+- GeneralContractor (LocalBusiness)
+- Service offerings
+- AggregateRating (4.8/5 from 127 reviews)
+- Geographic area served
+- Founder information
+- Opening hours
+- Contact details
+
+## Sitemap
+Available at: https://royal-builders.in/sitemap.xml
+
+## Robots
+Available at: https://royal-builders.in/robots.txt
