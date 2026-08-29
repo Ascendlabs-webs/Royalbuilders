@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     apple: "/logo.png",
   },
   verification: {
-    google: "google-site-verification-code",
+    google: "googled47779f90e9f8a03",
   },
   category: "Construction & Real Estate",
 };
