@@ -27,8 +27,8 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Royal Builders | Construction, Interiors, Real Estate & Maintenance in Chennai",
-    template: "%s | Royal Builders Chennai",
+    default: "Royal Builders | Construction & Interiors Chennai",
+    template: "%s | Royal Builders",
   },
   description:
     "Royal Builders - Chennai's trusted construction and real estate company since 2010. Premium house construction from ₹2,200/sq.ft, luxury interiors, verified land plots and professional building maintenance in Chennai. Free site visit & consultation.",
