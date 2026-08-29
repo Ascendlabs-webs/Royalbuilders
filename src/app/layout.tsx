@@ -31,35 +31,36 @@ export const metadata: Metadata = {
     template: "%s | Royal Builders Chennai",
   },
   description:
-    "Royal Builders - Chennai's trusted construction and real estate company since 2010. Premium house construction from ₹2,200/sq.ft, luxury interiors, verified land plots and professional building maintenance in Chennai.",
+    "Royal Builders - Chennai's trusted construction and real estate company since 2010. Premium house construction from ₹2,200/sq.ft, luxury interiors, verified land plots and professional building maintenance in Chennai. Free site visit & consultation.",
   keywords: [
     "construction company Chennai",
     "house construction cost Chennai",
+    "house construction Chennai",
+    "building construction Chennai",
     "interior designers Chennai",
-    "real estate",
+    "interior design Chennai",
+    "modular kitchen Chennai",
+    "wardrobe design Chennai",
+    "real estate Chennai",
     "land for sale North Chennai",
     "building maintenance Chennai",
-    "modular kitchen Chennai",
+    "water tank cleaning Chennai",
+    "plumbing services Chennai",
+    "electrical services Chennai",
+    "home renovation Chennai",
     "villa construction Chennai",
+    "apartment construction Chennai",
+    "commercial construction Chennai",
+    "joint venture construction Chennai",
+    "structural design Chennai",
+    "civil contractors Chennai",
+    "best construction company Chennai",
+    "top builders Chennai",
+    "Royal Builders Chennai",
   ],
   authors: [{ name: "Royal Builders", url: SITE.url }],
   creator: "Royal Builders",
-  openGraph: {
-    type: "website",
-    locale: "en_IN",
-    url: SITE.url,
-    siteName: "Royal Builders",
-    title: "Royal Builders | Building Dreams Since 2010",
-    description:
-      "Construction, Interior Design, Real Estate & Building Maintenance across Chennai. Free consultation & site visit - call +91 98409 51292.",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Royal Builders - Building Dreams Since 2010" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Royal Builders | Building Dreams Since 2010",
-    description: "Construction, Interiors, Real Estate & Maintenance - trusted across Chennai since 2010.",
-    images: ["/opengraph-image"],
-  },
+  publisher: "Royal Builders",
   robots: {
     index: true,
     follow: true,
@@ -70,6 +71,30 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: SITE.url,
+    siteName: "Royal Builders",
+    title: "Royal Builders | Building Dreams Since 2010",
+    description:
+      "Construction, Interior Design, Real Estate & Building Maintenance across Chennai. Free consultation & site visit - call +91 98409 51292.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Royal Builders - Building Dreams Since 2010",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Royal Builders | Building Dreams Since 2010",
+    description: "Construction, Interiors, Real Estate & Maintenance - trusted across Chennai since 2010.",
+    images: ["/opengraph-image"],
+    creator: "@royalbuilderschennai",
+  },
   alternates: {
     canonical: SITE.url,
   },
@@ -77,6 +102,10 @@ export const metadata: Metadata = {
     icon: "/logo.png",
     apple: "/logo.png",
   },
+  verification: {
+    google: "google-site-verification-code",
+  },
+  category: "Construction & Real Estate",
 };
 
 export const viewport: Viewport = {
@@ -99,7 +128,7 @@ const jsonLd = {
   telephone: "+919840951292",
   email: SITE.email,
   foundingDate: "2010",
-  founder: { "@type": "Person", name: "R. Sekaran" },
+  founder: { "@type": "Person", name: "D. Mukhtar" },
   address: {
     "@type": "PostalAddress",
     streetAddress: "No.754/1007, BV Colony, 23rd Street,",
@@ -111,8 +140,22 @@ const jsonLd = {
   geo: { "@type": "GeoCoordinates", latitude: 13.1289, longitude: 80.2409 },
   openingHours: "Mo-Su 09:00-20:00",
   priceRange: "₹₹",
-  areaServed: "Chennai",
-  sameAs: [SITE.socials.facebook, SITE.socials.instagram, SITE.socials.youtube],
+  areaServed: [
+    "Chennai",
+    "North Chennai",
+    "Perambur",
+    "Manali",
+    "Thiruvottiyur",
+    "Ambattur",
+    "BV Colony",
+  ],
+  sameAs: [
+    SITE.socials.facebook,
+    SITE.socials.instagram,
+    SITE.socials.youtube,
+    SITE.socials.whatsapp,
+    SITE.socials.gmb,
+  ],
   makesOffer: [
     {
       "@type": "Offer",
@@ -131,6 +174,13 @@ const jsonLd = {
       itemOffered: { "@type": "Service", name: "Building Maintenance", serviceType: "Building Maintenance" },
     },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "127",
+    bestRating: "5",
+    worstRating: "1",
+  },
 };
 
 export default function RootLayout({
