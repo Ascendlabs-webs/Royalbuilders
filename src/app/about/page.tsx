@@ -225,10 +225,10 @@ export default function AboutPage() {
             }
             subtitle="Engineers, designers and project leaders with one shared obsession - doing the job right."
           />
-          <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-6 justify-center">
             {TEAM.map((m, i) => (
               <Reveal key={m.name} delay={0.06 * i}>
-                <div className="group relative overflow-hidden border border-navy-900/10">
+                <div className="group relative overflow-hidden border border-navy-900/10 max-w-xs mx-auto">
                   <div className="relative h-56 overflow-hidden md:h-64">
                     <img
                       src={m.image}
