@@ -228,8 +228,8 @@ export default function AboutPage() {
           <div className="flex justify-center">
             {TEAM.map((m, i) => (
               <Reveal key={m.name} delay={0.06 * i}>
-                <div className="group relative overflow-hidden border border-navy-900/10 max-w-xs w-full">
-                  <div className="relative h-56 overflow-hidden md:h-64">
+                <div className="group relative overflow-hidden border border-navy-900/10 max-w-xs aspect-square">
+                  <div className="relative h-full w-full overflow-hidden">
                     <img
                       src={m.image}
                       alt={m.name}
