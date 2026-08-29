@@ -28,7 +28,7 @@ export const SITE = {
     whatsapp: "https://wa.me/919840951292",
     gmb: "https://www.google.com/maps/search/?api=1&query=Royal+Builders+Chennai",
   },
-  url: "https://royalgroupchennai.com",
+  url: "https://royal-builders.in",
 } as const;
 
 export const PHONE_HREF = `tel:+${SITE.phoneRaw}`;
