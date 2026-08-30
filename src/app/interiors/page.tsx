@@ -24,7 +24,6 @@ const galleryItems = [
   { src: "/images/interior-tv-1.jpg", category: "Living", title: "TV Unit" },
   { src: "/images/interior-panel-1.jpg", category: "Panels", title: "Wall Panels" },
   { src: "/images/interior-kitchen-2.jpg", category: "Kitchen", title: "Modern Kitchen" },
-  { src: "/images/interior-wardrobe-2.jpg", category: "Wardrobe", title: "Luxury Wardrobe" },
 ];
 
 export default function InteriorsPage() {
