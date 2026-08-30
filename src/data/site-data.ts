@@ -366,7 +366,7 @@ export type InteriorSection = {
 export const INTERIOR_SECTIONS: readonly InteriorSection[] = [
   {
     title: "Modular Kitchen",
-    image: "/images/interior-kitchen-1.jpg",
+    image: "/images/interior-kitchen-1.jpg?v=2",
     before: "/images/interior-before-1.jpg",
     after: "/images/interior-after-1.jpg",
     specs: "Engineered ergonomics, soft-close hinges, granite / quartz tops",
@@ -460,7 +460,7 @@ export const LIGHTING_SOLUTIONS = [
   {
     title: "Waterproof Profile",
     description: "IP-rated profiles for bathrooms, balconies and outdoor areas.",
-    image: "/images/interior-kitchen-1.jpg",
+    image: "/images/interior-kitchen-1.jpg?v=2",
   },
   {
     title: "Staircase Sensor Lighting",
