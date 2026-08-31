@@ -373,14 +373,6 @@ export const INTERIOR_SECTIONS: readonly InteriorSection[] = [
     materials: ["Plywood", "PVC", "Quartz", "Granite"],
   },
   {
-    title: "Wardrobes",
-    image: "/images/interior-wardrobe-1.jpg",
-    before: "/images/interior-before-2.jpg",
-    after: "/images/interior-after-2.jpg",
-    specs: "Floor-to-ceiling, internal organisers, sensor lighting options",
-    materials: ["Plywood", "Aluminium", "PVC", "Laminates"],
-  },
-  {
     title: "TV Units",
     image: "/images/interior-tv-1.jpg?v=3",
     before: "/images/interior-before-3.jpg",
@@ -417,12 +409,6 @@ export const INTERIOR_SECTIONS: readonly InteriorSection[] = [
     image: "/images/interior-living-1.jpg",
     specs: "Complete living spaces - ceiling, TV unit, paneling",
     materials: ["Gypsum", "Laminates", "Aluminium"],
-  },
-  {
-    title: "Modern Kitchen",
-    image: "/images/interior-kitchen-2.jpg",
-    specs: "Handleless kitchens, high-gloss, smart storage",
-    materials: ["PVC", "Acrylic", "UPVC"],
   },
   {
     title: "Luxury Wardrobe",
