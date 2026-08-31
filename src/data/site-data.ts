@@ -374,7 +374,7 @@ export const INTERIOR_SECTIONS: readonly InteriorSection[] = [
   },
   {
     title: "TV Units",
-    image: "/images/interior-tv-1.jpg?v=3",
+    image: "/images/interior-tv-1.jpg?v=4",
     before: "/images/interior-before-3.jpg",
     after: "/images/interior-after-3.jpg",
     specs: "Floating designs, concealed wiring, accent back panels",
