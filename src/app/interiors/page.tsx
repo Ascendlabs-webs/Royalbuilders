@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const galleryItems = [
   { src: "/images/interior-kitchen-after.png?v=1", category: "Kitchen", title: "Modular Kitchen" },
   { src: "/images/interior-ceiling-1.jpg", category: "Ceiling", title: "False Ceiling" },
-  { src: "/images/interior-living-1.jpg?v=4", category: "Living", title: "Living Room Design" },
+  { src: "/images/interior-living-room.png?v=1", category: "Living", title: "Living Room Design" },
   { src: "/images/interior-bedroom-1.jpg", category: "Bedroom", title: "Bedroom Design", span: "wide" as const },
   { src: "/images/interior-tv-1.jpg?v=4", category: "Living", title: "TV Unit" },
   { src: "/images/interior-panel-1.jpg", category: "Panels", title: "Wall Panels" },

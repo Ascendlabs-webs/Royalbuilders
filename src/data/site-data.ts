@@ -406,7 +406,7 @@ export const INTERIOR_SECTIONS: readonly InteriorSection[] = [
   },
   {
     title: "Living Room",
-    image: "/images/interior-living-1.jpg?v=4",
+    image: "/images/interior-living-room.png?v=1",
     specs: "Complete living spaces - ceiling, TV unit, paneling",
     materials: ["Gypsum", "Laminates", "Aluminium"],
   },
