@@ -366,9 +366,9 @@ export type InteriorSection = {
 export const INTERIOR_SECTIONS: readonly InteriorSection[] = [
   {
     title: "Modular Kitchen",
-    image: "/images/interior-kitchen-1.jpg?v=4",
+    image: "/images/interior-kitchen-after.png?v=1",
     before: "/images/interior-before-1.jpg",
-    after: "/images/interior-after-1.jpg",
+    after: "/images/interior-kitchen-after.png?v=1",
     specs: "Engineered ergonomics, soft-close hinges, granite / quartz tops",
     materials: ["Plywood", "PVC", "Quartz", "Granite"],
   },
