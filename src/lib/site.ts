@@ -22,7 +22,7 @@ export const SITE = {
     "https://www.google.com/maps/search/?api=1&query=No.754%2F1007%2C+BV+Colony%2C+23rd+Street%2C+Chennai+600039",
   hours: "Mon - Sun, 9:00 AM - 8:00 PM",
   socials: {
-    facebook: "https://facebook.com/royalbuilderschennai",
+    facebook: "https://www.facebook.com/share/1EFQdXvC55/",
     instagram: "https://instagram.com/royalbuilderschennai",
     youtube: "https://youtube.com/@royalbuilderschennai",
     whatsapp: "https://wa.me/919840951292",
