@@ -311,6 +311,11 @@ body {
     box-shadow: 0 0 0 3px rgba(252, 165, 165, 0.25);
 }
 
+.search-input {
+    flex: 1;
+    min-width: 250px;
+}
+
 /* Properties Grid */
 .properties-grid {
     display: grid;

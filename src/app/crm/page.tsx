@@ -85,6 +85,7 @@ export default function CrmPage() {
   const [formData, setFormData] = useState<FormData>({});
   const [sellingPoints, setSellingPoints] = useState<string[]>([]);
   const [previewMainImg, setPreviewMainImg] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
   // Refs for file inputs
   const mainFileRef = useRef<HTMLInputElement | null>(null);
@@ -289,6 +290,14 @@ export default function CrmPage() {
                 </button>
               </div>
               <div className="filters-bar">
+                <input
+                  type="text"
+                  className="filter search-input"
+                  id="property-search"
+                  placeholder="Search properties..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
                 <select className="filter" id="property-type-filter">
                   <option value="">All Types</option>
                   <option value="land">Land</option>
@@ -319,7 +328,13 @@ export default function CrmPage() {
                 </select>
               </div>
               <div className="properties-grid" id="properties-grid">
-                {properties.map((p) => (
+                {properties.filter(p =>
+                  !searchTerm ||
+                  p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                  p.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                  p.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                  p.type.toLowerCase().includes(searchTerm.toLowerCase())
+                ).map((p) => (
                   <div key={p.id} className="property-card">
                     <div className="property-card-header">
                       <img src={p.photo} alt={p.title} />
