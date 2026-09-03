@@ -2,10 +2,46 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import '../styles/globals.css';
-import './crm.css';
+import '../../styles/crm.css';
 
-const formatNumber = (num) =>
+interface FormData {
+  propertyId?: string;
+  propertyTitle?: string;
+  propertyType?: string;
+  location?: string;
+  fullAddress?: string;
+  askingPrice?: string;
+  pricePerSqFt?: string;
+  totalArea?: string;
+  plotDimensions?: string;
+  frontage?: string;
+  facing?: string;
+  roadWidth?: string;
+  builtUpArea?: string;
+  floors?: string;
+  bedrooms?: string;
+  bathrooms?: string;
+  patta?: boolean;
+  ec?: boolean;
+  approvalStatus?: boolean | string;
+  water?: boolean;
+  electricity?: boolean;
+  drainage?: boolean;
+  ownershipTitle?: boolean | string;
+  otherDocuments?: boolean | string;
+  googleMapsLink?: string;
+  landmark1?: string;
+  distance1?: string;
+  landmark2?: string;
+  distance2?: string;
+  landmark3?: string;
+  distance3?: string;
+  landmark4?: string;
+  distance4?: string;
+  saveAsDraft?: boolean;
+}
+
+const formatNumber = (num: number) =>
   num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
 export default function CrmPage() {
@@ -46,8 +82,8 @@ export default function CrmPage() {
   const [activePage, setActivePage] = useState('properties'); // 'properties' | 'add-property'
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 6;
-  const [formData, setFormData] = useState({});
-  const [sellingPoints, setSellingPoints] = useState([]);
+  const [formData, setFormData] = useState<FormData>({});
+  const [sellingPoints, setSellingPoints] = useState<string[]>([]);
   const [previewMainImg, setPreviewMainImg] = useState<string | null>(null);
 
   // Refs for file inputs
@@ -97,7 +133,7 @@ export default function CrmPage() {
           status: formData.saveAsDraft ? 'draft' : 'available',
           createdDate: new Date().toISOString().slice(0, 10),
           photo: previewMainImg
-            ? URL.createObjectURL(mainFileRef.current?.files[0] as File)
+            ? URL.createObjectURL(mainFileRef.current?.files?.[0] as File)
             : 'https://via.placeholder.com/400x300?text=No+Image'
         };
         setProperties(prev => [newProp, ...prev]); // newest first
@@ -113,7 +149,8 @@ export default function CrmPage() {
     const inputs = stepEl.querySelectorAll('input[required], select[required], textarea[required]');
     let ok = true;
     inputs.forEach(inp => {
-      if (!inp.value.trim()) {
+      const el = inp as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+      if (!el.value.trim()) {
         ok = false;
         inp.classList.add('is-invalid');
       } else {
@@ -128,11 +165,15 @@ export default function CrmPage() {
     if (!stepEl) return;
     const inputs = stepEl.querySelectorAll('input, select, textarea');
     inputs.forEach(inp => {
-      if (inp.name) setFormData(fd => ({ ...fd, [inp.name]: inp.value }));
-      else if (inp.id) setFormData(fd => ({ ...fd, [inp.id]: inp.value }));
+      const el = inp as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
+      if (el.name) setFormData(fd => ({ ...fd, [el.name]: el.value }));
+      else if (el.id) setFormData(fd => ({ ...fd, [el.id]: el.value }));
     });
     const checks = stepEl.querySelectorAll('input[type="checkbox"]');
-    checks.forEach(cb => setFormData(fd => ({ ...fd, [cb.id]: cb.checked })));
+    checks.forEach(cb => {
+      const checkbox = cb as HTMLInputElement;
+      setFormData(fd => ({ ...fd, [checkbox.id]: checkbox.checked }));
+    });
   };
 
   const addSellingPoint = (e: React.FormEvent) => {
@@ -150,7 +191,7 @@ export default function CrmPage() {
   };
 
   const handleMainFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files[0];
+    const file = e.target.files?.[0];
     if (file) {
       const url = URL.createObjectURL(file);
       setPreviewMainImg(url);
@@ -163,11 +204,11 @@ export default function CrmPage() {
   };
 
   const handleStreetFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData(fd => ({ ...fd, streetViewFile: e.target.files[0] }));
+    setFormData(fd => ({ ...fd, streetViewFile: e.target.files?.[0] }));
   };
 
   const handleSiteFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData(fd => ({ ...fd, sitePlanFile: e.target.files[0] }));
+    setFormData(fd => ({ ...fd, sitePlanFile: e.target.files?.[0] }));
   };
 
   // Effect to clean up object URLs on unmount
@@ -386,7 +427,7 @@ export default function CrmPage() {
                       <label htmlFor="full-address">Full Address</label>
                       <textarea
                         id="full-address"
-                        rows="2"
+                        rows={2}
                         placeholder="Street, Landmark, City, PIN"
                         value={formData.fullAddress || ''}
                         onChange={(e) => setFormData(fd => ({ ...fd, fullAddress: e.target.value }))}
@@ -460,7 +501,7 @@ export default function CrmPage() {
                         <option value="east">East</option>
                         <option value="west">West</option>
                         <option value="north-east">North-East</option>
-                        <option value="north-west">North-West</option
+                        <option value="north-west">North-West</option>
                       </select>
                     </div>
                     <div className="form-group">
@@ -542,8 +583,9 @@ export default function CrmPage() {
                               className="remove-btn"
                               onClick={() => removeSellingPoint(idx)}
                             >
-                              ×
-                            </div>
+                              x
+                            </button>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -581,7 +623,7 @@ export default function CrmPage() {
                             <input
                               type="checkbox"
                               id="approval-status"
-                              checked={formData.approvalStatus || false}
+                              checked={!!formData.approvalStatus}
                               onChange={(e) => setFormData(fd => ({ ...fd, approvalStatus: e.target.checked }))}
                             />
                             Approval Status
@@ -625,7 +667,7 @@ export default function CrmPage() {
                             <input
                               type="checkbox"
                               id="ownership-title"
-                              checked={formData.ownershipTitle || false}
+                              checked={!!formData.ownershipTitle}
                               onChange={(e) => setFormData(fd => ({ ...fd, ownershipTitle: e.target.checked }))}
                             />
                             Ownership / Title Clear
@@ -636,7 +678,7 @@ export default function CrmPage() {
                             <input
                               type="checkbox"
                               id="other-documents"
-                              checked={formData.otherDocuments || false}
+                              checked={!!formData.otherDocuments}
                               onChange={(e) => setFormData(fd => ({ ...fd, otherDocuments: e.target.checked }))}
                             />
                             Other Documents
@@ -952,7 +994,7 @@ export default function CrmPage() {
                   Cancel
                 </button>
               </div>
-            </>
+            </div>
           )}
         </section>
       </main>
