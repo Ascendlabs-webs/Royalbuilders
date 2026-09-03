@@ -460,6 +460,50 @@ export const LIGHTING_SOLUTIONS = [
   },
 ] as const;
 
+export type ListingProperty = {
+  id: string;
+  title: string;
+  type: string;
+  location: string;
+  price: number;
+  status: "available" | "sold" | "reserved" | "draft";
+  createdDate: string;
+  photo: string;
+};
+
+export const DEFAULT_LISTINGS: readonly ListingProperty[] = [
+  {
+    id: "RB-PROP-001",
+    title: "Luxury Villa in Besant Nagar",
+    type: "House",
+    location: "Besant Nagar, Chennai",
+    price: 15000000,
+    status: "available",
+    createdDate: "2024-01-15",
+    photo: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+  },
+  {
+    id: "RB-PROP-002",
+    title: "Premium Apartment in Adyar",
+    type: "Apartment",
+    location: "Adyar, Chennai",
+    price: 8500000,
+    status: "sold",
+    createdDate: "2024-02-20",
+    photo: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80"
+  },
+  {
+    id: "RB-PROP-003",
+    title: "Commercial Plot in OMR",
+    type: "Land",
+    location: "Old Mahabalipuram Road, Chennai",
+    price: 12000000,
+    status: "available",
+    createdDate: "2024-03-10",
+    photo: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&q=80"
+  },
+];
+
 export const REAL_ESTATE_TYPES = [
   {
     title: "Residential Land",

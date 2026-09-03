@@ -1,0 +1,129 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { DEFAULT_LISTINGS, type ListingProperty } from '@/data/site-data';
+import { MapPin, Tag } from 'lucide-react';
+import Reveal from '@/components/ui/Reveal';
+import SectionHeading from '@/components/ui/SectionHeading';
+
+const STORAGE_KEY = 'royal-builders-listings';
+
+function loadListings(): ListingProperty[] {
+  if (typeof window === 'undefined') return [...DEFAULT_LISTINGS];
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored) {
+    try {
+      return JSON.parse(stored);
+    } catch {
+      return [...DEFAULT_LISTINGS];
+    }
+  }
+  return [...DEFAULT_LISTINGS];
+}
+
+function formatPrice(price: number): string {
+  if (price >= 10000000) {
+    return `₹${(price / 10000000).toFixed(2)} Cr`;
+  } else if (price >= 100000) {
+    return `₹${(price / 100000).toFixed(2)} Lakhs`;
+  }
+  return `₹${price.toLocaleString('en-IN')}`;
+}
+
+export default function RealEstateListings() {
+  const [listings, setListings] = useState<ListingProperty[]>([]);
+  const [filter, setFilter] = useState<string>('all');
+
+  useEffect(() => {
+    setListings(loadListings());
+  }, []);
+
+  const filteredListings = filter === 'all'
+    ? listings.filter(l => l.status === 'available')
+    : listings.filter(l => l.type.toLowerCase() === filter.toLowerCase() && l.status === 'available');
+
+  const types = ['all', ...Array.from(new Set(listings.map(l => l.type)))];
+
+  return (
+    <section className="bg-alabaster py-24 lg:py-32">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-8">
+        <SectionHeading
+          kicker="Available Properties"
+          title={
+            <>
+              Current <span className="text-gradient-crimson">Listings</span>
+            </>
+          }
+          subtitle="Explore our verified property listings. Add new properties from the CRM dashboard."
+        />
+
+        <div className="mb-10 flex flex-wrap gap-3">
+          {types.map(type => (
+            <button
+              key={type}
+              onClick={() => setFilter(type)}
+              className={`px-4 py-2 text-sm font-medium transition-all ${
+                filter === type
+                  ? 'bg-crimson-500 text-white'
+                  : 'bg-white text-graphite border border-navy-900/10 hover:border-crimson-500/50'
+              }`}
+            >
+              {type === 'all' ? 'All Types' : type}
+            </button>
+          ))}
+        </div>
+
+        {filteredListings.length === 0 ? (
+          <div className="py-16 text-center">
+            <p className="text-graphite">No available listings found. Check back later or add properties via CRM.</p>
+          </div>
+        ) : (
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {filteredListings.map((listing) => (
+              <Reveal key={listing.id}>
+                <div className="group overflow-hidden border border-navy-900/10 bg-white transition-all duration-500 hover:border-crimson-500/50 hover:shadow-crimson">
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={listing.photo}
+                      alt={listing.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="inline-flex items-center gap-1.5 bg-crimson-500 px-3 py-1.5 text-[10px] font-bold tracking-[0.2em] text-white uppercase">
+                        <Tag size={12} />
+                        {listing.type}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-display text-xl font-bold text-navy-900">{listing.title}</h3>
+                    <div className="mt-2 flex items-center gap-1.5 text-sm text-graphite">
+                      <MapPin size={14} className="text-crimson-500" />
+                      {listing.location}
+                    </div>
+                    <div className="mt-4 border-t border-navy-900/10 pt-4">
+                      <p className="font-display text-2xl font-bold text-crimson-600">
+                        {formatPrice(listing.price)}
+                      </p>
+                      <p className="mt-1 text-xs text-graphite">ID: {listing.id}</p>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        )}
+
+        <div className="mt-10 text-center">
+          <a
+            href="/crm"
+            className="inline-flex items-center gap-2 border border-navy-900/20 bg-white px-6 py-3 text-sm font-medium text-graphite transition-all hover:border-crimson-500 hover:text-crimson-600"
+          >
+            Manage Listings via CRM →
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}

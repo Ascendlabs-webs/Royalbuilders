@@ -5,6 +5,7 @@ import Reveal from "@/components/ui/Reveal";
 import Icon from "@/components/ui/Icon";
 import LeadForm from "@/components/ui/LeadForm";
 import CTASection from "@/components/ui/CTASection";
+import RealEstateListings from "./RealEstateListings";
 import { REAL_ESTATE_TYPES, REAL_ESTATE_SERVICES, INVESTMENT_BENEFITS } from "@/data/site-data";
 import { SITE } from "@/lib/site";
 
@@ -69,6 +70,8 @@ export default function RealEstatePage() {
           </div>
         </div>
       </section>
+
+      <RealEstateListings />
 
       <section className="relative overflow-hidden bg-navy-950 py-24 lg:py-32">
         <div

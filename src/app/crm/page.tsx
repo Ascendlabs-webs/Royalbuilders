@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import '../../styles/crm.css';
+import { DEFAULT_LISTINGS, type ListingProperty } from '../../data/site-data';
 
 interface FormData {
   propertyId?: string;
@@ -41,44 +42,31 @@ interface FormData {
   saveAsDraft?: boolean;
 }
 
+const STORAGE_KEY = 'royal-builders-listings';
+
 const formatNumber = (num: number) =>
   num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
-export default function CrmPage() {
-  // Sample properties (in a real app, fetch from API)
-  const [properties, setProperties] = useState([
-    {
-      id: "RB-PROP-001",
-      title: "Luxury Villa in Besant Nagar",
-      type: "House",
-      location: "Besant Nagar, Chennai",
-      price: 15000000,
-      status: "available",
-      createdDate: "2024-01-15",
-      photo: "https://via.placeholder.com/400x300?text=Property+1"
-    },
-    {
-      id: "RB-PROP-002",
-      title: "Premium Apartment in Adyar",
-      type: "Apartment",
-      location: "Adyar, Chennai",
-      price: 8500000,
-      status: "sold",
-      createdDate: "2024-02-20",
-      photo: "https://via.placeholder.com/400x300?text=Property+2"
-    },
-    {
-      id: "RB-PROP-003",
-      title: "Commercial Plot in OMR",
-      type: "Land",
-      location: "Old Mahabalipuram Road, Chennai",
-      price: 12000000,
-      status: "available",
-      createdDate: "2024-03-10",
-      photo: "https://via.placeholder.com/400x300?text=Property+3"
+function loadProperties(): ListingProperty[] {
+  if (typeof window === 'undefined') return [...DEFAULT_LISTINGS];
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored) {
+    try {
+      return JSON.parse(stored);
+    } catch {
+      return [...DEFAULT_LISTINGS];
     }
-  ]);
+  }
+  return [...DEFAULT_LISTINGS];
+}
 
+function saveProperties(props: ListingProperty[]) {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(props));
+}
+
+export default function CrmPage() {
+  const [properties, setProperties] = useState<ListingProperty[]>(loadProperties);
   const [activePage, setActivePage] = useState('properties'); // 'properties' | 'add-property'
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 6;
@@ -125,19 +113,23 @@ export default function CrmPage() {
         saveStepData(currentStep);
         // In a real app, you would POST to an API here.
         // For demo, add to local state.
-        const newProp = {
+        const newProp: ListingProperty = {
           id: formData.propertyId || `RB-PROP-${Date.now()}`,
           title: formData.propertyTitle || 'Untitled Property',
           type: formData.propertyType || 'House',
           location: formData.location || 'Unknown',
           price: Number(formData.askingPrice) || 0,
-          status: formData.saveAsDraft ? 'draft' : 'available',
+          status: (formData.saveAsDraft ? 'draft' : 'available') as ListingProperty['status'],
           createdDate: new Date().toISOString().slice(0, 10),
           photo: previewMainImg
             ? URL.createObjectURL(mainFileRef.current?.files?.[0] as File)
             : 'https://via.placeholder.com/400x300?text=No+Image'
         };
-        setProperties(prev => [newProp, ...prev]); // newest first
+        setProperties(prev => {
+          const updated = [newProp, ...prev];
+          saveProperties(updated);
+          return updated;
+        }); // newest first
         alert(formData.saveAsDraft ? 'Saved as draft!' : 'Property published!');
         navigateTo('properties');
       }
