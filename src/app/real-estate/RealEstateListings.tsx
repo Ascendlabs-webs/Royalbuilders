@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { DEFAULT_LISTINGS, type ListingProperty } from '@/data/site-data';
-import { MapPin, Tag } from 'lucide-react';
+import { MapPin, Tag, Search } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 import SectionHeading from '@/components/ui/SectionHeading';
 
@@ -33,14 +33,21 @@ function formatPrice(price: number): string {
 export default function RealEstateListings() {
   const [listings, setListings] = useState<ListingProperty[]>([]);
   const [filter, setFilter] = useState<string>('all');
+  const [search, setSearch] = useState<string>('');
 
   useEffect(() => {
     setListings(loadListings());
   }, []);
 
-  const filteredListings = filter === 'all'
-    ? listings.filter(l => l.status === 'available')
-    : listings.filter(l => l.type.toLowerCase() === filter.toLowerCase() && l.status === 'available');
+  const filteredListings = listings.filter(l => {
+    const matchesStatus = l.status === 'available';
+    const matchesType = filter === 'all' || l.type.toLowerCase() === filter.toLowerCase();
+    const matchesSearch = !search ||
+      l.title.toLowerCase().includes(search.toLowerCase()) ||
+      l.location.toLowerCase().includes(search.toLowerCase()) ||
+      l.id.toLowerCase().includes(search.toLowerCase());
+    return matchesStatus && matchesType && matchesSearch;
+  });
 
   const types = ['all', ...Array.from(new Set(listings.map(l => l.type)))];
 
@@ -56,6 +63,19 @@ export default function RealEstateListings() {
           }
           subtitle="Explore our verified property listings. Add new properties from the CRM dashboard."
         />
+
+        <div className="mb-6">
+          <div className="relative max-w-md">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-graphite" size={18} />
+            <input
+              type="text"
+              placeholder="Search by title, location, or ID..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full border border-navy-900/10 bg-white py-3 pl-11 pr-4 text-sm transition-all placeholder:text-graphite focus:border-crimson-500 focus:outline-none"
+            />
+          </div>
+        </div>
 
         <div className="mb-10 flex flex-wrap gap-3">
           {types.map(type => (
