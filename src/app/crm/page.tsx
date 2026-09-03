@@ -242,7 +242,7 @@ export default function CrmPage() {
           {activePage === 'properties' && (
             <>
               <div className="page-header">
-                <h2>Properties</h>
+                <h2>Properties</h2>
                 <button className="btn-primary" onClick={() => navigateTo('add-property')}>
                   + Add Property
                 </button>
