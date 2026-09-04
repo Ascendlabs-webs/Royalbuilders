@@ -168,14 +168,7 @@ export default function RealEstateListings() {
           </div>
         )}
 
-        <div className="mt-10 text-center">
-          <a
-            href="/crm"
-            className="inline-flex items-center gap-2 border border-navy-900/20 bg-white px-6 py-3 text-sm font-medium text-graphite transition-all hover:border-crimson-500 hover:text-crimson-600"
-          >
-            Manage Listings via CRM →
-          </a>
-        </div>
+
       </div>
     </section>
   );
