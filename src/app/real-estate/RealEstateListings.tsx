@@ -55,15 +55,27 @@ export default function RealEstateListings() {
     };
   }, []);
 
-  const filteredListings = listings.filter(l => {
-    const matchesStatus = l.status === 'available';
-    const matchesType = filter === 'all' || l.type.toLowerCase() === filter.toLowerCase();
-    const matchesSearch = !search ||
-      l.title.toLowerCase().includes(search.toLowerCase()) ||
-      l.location.toLowerCase().includes(search.toLowerCase()) ||
-      l.id.toLowerCase().includes(search.toLowerCase());
-    return matchesStatus && matchesType && matchesSearch;
-  });
+  const filteredListings = listings
+    .filter(l => {
+      const matchesType = filter === 'all' || l.type.toLowerCase() === filter.toLowerCase();
+      const matchesSearch = !search ||
+        l.title.toLowerCase().includes(search.toLowerCase()) ||
+        l.location.toLowerCase().includes(search.toLowerCase()) ||
+        l.id.toLowerCase().includes(search.toLowerCase());
+      return matchesType && matchesSearch;
+    })
+    .sort((a, b) => {
+      // Available first, then reserved, then sold; drafts last.
+      const rank = (s: string) => (s === 'available' ? 0 : s === 'reserved' ? 1 : s === 'sold' ? 2 : 3);
+      return rank(a.status) - rank(b.status);
+    });
+
+  const statusBadge = (status: string) => {
+    if (status === 'available') return 'bg-crimson-500 text-white';
+    if (status === 'sold') return 'bg-navy-950/80 text-white';
+    if (status === 'reserved') return 'bg-amber-500 text-navy-950';
+    return 'bg-mist text-graphite';
+  };
 
   const types = ['all', ...Array.from(new Set(listings.map(l => l.type)))];
 
@@ -129,6 +141,11 @@ export default function RealEstateListings() {
                       <span className="inline-flex items-center gap-1.5 bg-crimson-500 px-3 py-1.5 text-[10px] font-bold tracking-[0.2em] text-white uppercase">
                         <Tag size={12} />
                         {listing.type}
+                      </span>
+                    </div>
+                    <div className="absolute top-4 right-4">
+                      <span className={`px-3 py-1.5 text-[10px] font-bold tracking-[0.2em] uppercase ${statusBadge(listing.status)}`}>
+                        {listing.status}
                       </span>
                     </div>
                   </div>
