@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import '../../styles/crm.css';
-import { DEFAULT_LISTINGS, type ListingProperty } from '../../data/site-data';
+import '@/styles/crm.css';
+import { DEFAULT_LISTINGS, type ListingProperty } from '@/data/site-data';
 
 interface FormData {
   propertyId?: string;
