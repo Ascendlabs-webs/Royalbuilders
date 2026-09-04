@@ -96,12 +96,12 @@ export const SITE_SETTINGS_QUERY = groq`*[_type == "siteSettings"][0] {
 /* Every fetcher falls back to static data when Sanity is unwired/empty,     */
 /* so the live site never breaks during rollout.                             */
 
-async function safeFetch<T>(query: string, params?: Record<string, unknown>): Promise<T | null> {
+async function safeFetch<T>(query: string, params?: Record<string, unknown>, fresh = false): Promise<T | null> {
   if (!isSanityConfigured) return null;
   try {
-    return await sanityClient.fetch<T>(query, params ?? {}, {
-      next: { revalidate: 3600 },
-    });
+    return await sanityClient.fetch<T>(query, params ?? {}, fresh
+      ? { cache: "no-store" }
+      : { next: { revalidate: 3600 } });
   } catch {
     return null;
   }
@@ -123,9 +123,9 @@ export async function getProperties(): Promise<ListingProperty[]> {
   }));
 }
 
-/** All properties incl. drafts — for the CRM dashboard. */
+/** All properties incl. drafts — for the CRM dashboard. Always fresh (runtime API). */
 export async function getAllPropertiesForCrm(): Promise<ListingProperty[]> {
-  const rows = await safeFetch<CmsProperty[]>(ALL_PROPERTIES_QUERY);
+  const rows = await safeFetch<CmsProperty[]>(ALL_PROPERTIES_QUERY, undefined, true);
   if (!rows || rows.length === 0) return [...DEFAULT_LISTINGS];
   return rows.map((p) => ({
     id: p.propertyId,
