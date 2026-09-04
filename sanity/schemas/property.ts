@@ -1,0 +1,70 @@
+import { defineField, defineType } from "sanity";
+
+export default defineType({
+  name: "property",
+  title: "Property Listing",
+  type: "document",
+  fields: [
+    defineField({ name: "propertyId", title: "Property ID", type: "string", validation: (r) => r.required() }),
+    defineField({ name: "title", title: "Title", type: "string", validation: (r) => r.required() }),
+    defineField({
+      name: "type",
+      title: "Type",
+      type: "string",
+      options: { list: ["House", "Apartment", "Land", "Commercial"], layout: "radio" },
+      validation: (r) => r.required(),
+    }),
+    defineField({ name: "location", title: "Location", type: "string", validation: (r) => r.required() }),
+    defineField({ name: "fullAddress", title: "Full Address", type: "text", rows: 2 }),
+    defineField({ name: "price", title: "Asking Price (₹)", type: "number", validation: (r) => r.required().min(0) }),
+    defineField({ name: "pricePerSqft", title: "Price per Sq.Ft (₹)", type: "number" }),
+    defineField({
+      name: "status",
+      title: "Status",
+      type: "string",
+      options: { list: ["available", "sold", "reserved", "draft"], layout: "radio" },
+      initialValue: "available",
+      validation: (r) => r.required(),
+    }),
+    defineField({ name: "createdDate", title: "Created Date", type: "date" }),
+    defineField({ name: "totalArea", title: "Total Area (Sq.Ft)", type: "number" }),
+    defineField({ name: "bedrooms", title: "Bedrooms", type: "number" }),
+    defineField({ name: "bathrooms", title: "Bathrooms", type: "number" }),
+    defineField({ name: "facing", title: "Facing", type: "string" }),
+    defineField({ name: "sellingPoints", title: "Selling Points", type: "array", of: [{ type: "string" }] }),
+    defineField({
+      name: "legal",
+      title: "Legal & Utilities",
+      type: "object",
+      fields: [
+        { name: "patta", type: "boolean", title: "Patta" },
+        { name: "ec", type: "boolean", title: "EC" },
+        { name: "approval", type: "boolean", title: "Approval Clear" },
+        { name: "water", type: "boolean", title: "Water Connection" },
+        { name: "electricity", type: "boolean", title: "Electricity Connection" },
+        { name: "drainage", type: "boolean", title: "Drainage" },
+      ],
+    }),
+    defineField({ name: "photo", title: "Main Photo (upload)", type: "image", options: { hotspot: true } }),
+    defineField({ name: "photoUrl", title: "Main Photo URL (external, e.g. migrated)", type: "url" }),
+    defineField({
+      name: "gallery",
+      title: "Media Gallery",
+      type: "array",
+      of: [{ type: "image", options: { hotspot: true }, fields: [{ name: "category", title: "Category", type: "string", options: { list: ["projects", "team", "services", "exterior", "interior"] } }] }],
+    }),
+    defineField({ name: "mapLink", title: "Google Maps Link", type: "url" }),
+    defineField({
+      name: "seo",
+      title: "SEO",
+      type: "object",
+      fields: [
+        { name: "title", type: "string", title: "Meta Title" },
+        { name: "description", type: "text", title: "Meta Description", rows: 2 },
+      ],
+    }),
+  ],
+  preview: {
+    select: { title: "title", subtitle: "location", media: "photo" },
+  },
+});

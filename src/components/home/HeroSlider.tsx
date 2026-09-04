@@ -38,7 +38,16 @@ const SLIDES = [
   },
 ];
 
-export default function HeroSlider() {
+export type HeroSlide = {
+  kicker: string;
+  title: string;
+  sub: string;
+  image: string;
+  href: string;
+};
+
+export default function HeroSlider({ slides = SLIDES }: { slides?: HeroSlide[] }) {
+  const SLIDES_ACTIVE = slides.length > 0 ? slides : SLIDES;
   const [index, setIndex] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
   const slidesRef = useRef<HTMLDivElement>(null);
@@ -78,19 +87,19 @@ export default function HeroSlider() {
   useEffect(() => {
     if (reduceMotion) return;
     timerRef.current = setTimeout(() => {
-      setIndex((i) => (i + 1) % SLIDES.length);
+      setIndex((i) => (i + 1) % SLIDES_ACTIVE.length);
     }, 7000);
     return () => {
       if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, [index, reduceMotion]);
+  }, [index, reduceMotion, SLIDES_ACTIVE.length]);
 
-  const slide = SLIDES[index];
+  const slide = SLIDES_ACTIVE[index];
 
   return (
     <section ref={sectionRef} className="relative h-[100svh] min-h-[560px] overflow-hidden bg-navy-950">
       <div ref={slidesRef} className="absolute inset-0">
-        {SLIDES.map((s, i) => (
+        {SLIDES_ACTIVE.map((s, i) => (
           <div
             key={s.image}
             data-slide
@@ -183,14 +192,14 @@ export default function HeroSlider() {
 
       <div className="absolute bottom-24 right-6 z-30 hidden flex-col gap-3 md:right-10 lg:flex" aria-hidden>
         <button
-          onClick={() => setIndex((i) => (i - 1 + SLIDES.length) % SLIDES.length)}
+          onClick={() => setIndex((i) => (i - 1 + SLIDES_ACTIVE.length) % SLIDES_ACTIVE.length)}
           className="flex h-11 w-11 items-center justify-center border border-white/25 text-white transition-all hover:border-crimson-500 hover:bg-crimson-500 hover:text-navy-950"
           aria-label="Previous slide"
         >
           <ChevronLeft size={18} />
         </button>
         <button
-          onClick={() => setIndex((i) => (i + 1) % SLIDES.length)}
+          onClick={() => setIndex((i) => (i + 1) % SLIDES_ACTIVE.length)}
           className="flex h-11 w-11 items-center justify-center border border-white/25 text-white transition-all hover:border-crimson-500 hover:bg-crimson-500 hover:text-navy-950"
           aria-label="Next slide"
         >
@@ -202,10 +211,10 @@ export default function HeroSlider() {
         <span className="font-display text-5xl font-bold text-white/90">
           <span className="text-crimson-500">0{index + 1}</span>
           <span className="mx-2 text-2xl text-white/30">/</span>
-          <span className="text-2xl text-white/40">0{SLIDES.length}</span>
+          <span className="text-2xl text-white/40">0{SLIDES_ACTIVE.length}</span>
         </span>
         <div className="flex gap-2">
-          {SLIDES.map((s, i) => (
+          {SLIDES_ACTIVE.map((s, i) => (
             <button
               key={s.kicker}
               onClick={() => setIndex(i)}

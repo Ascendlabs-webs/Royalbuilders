@@ -81,6 +81,28 @@ export default function CrmPage() {
   const streetFileRef = useRef<HTMLInputElement | null>(null);
   const siteFileRef = useRef<HTMLInputElement | null>(null);
 
+  // CMS-first: hydrate from /api/properties (Sanity), keep localStorage drafts.
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/properties", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (cancelled || !data || !Array.isArray(data.properties) || data.properties.length === 0) return;
+        const cms = data.properties as ListingProperty[];
+        setProperties((prev) => {
+          const cmsIds = new Set(cms.map((p) => p.id));
+          const localOnly = prev.filter((p) => !cmsIds.has(p.id));
+          const merged = [...cms, ...localOnly];
+          saveProperties(merged);
+          return merged;
+        });
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   // Navigation
   const navigateTo = (page: 'properties' | 'add-property') => {
     setActivePage(page);
@@ -130,6 +152,12 @@ export default function CrmPage() {
           saveProperties(updated);
           return updated;
         }); // newest first
+        // Publish to CMS when a write token is configured (fire-and-forget).
+        fetch("/api/properties", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(newProp),
+        }).catch(() => {});
         alert(formData.saveAsDraft ? 'Saved as draft!' : 'Property published!');
         navigateTo('properties');
       }

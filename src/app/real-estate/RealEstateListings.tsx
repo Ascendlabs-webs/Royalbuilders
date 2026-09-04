@@ -36,7 +36,23 @@ export default function RealEstateListings() {
   const [search, setSearch] = useState<string>('');
 
   useEffect(() => {
-    setListings(loadListings());
+    let cancelled = false;
+    // CMS-first: live properties from /api/properties, localStorage as fallback.
+    fetch("/api/properties", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (!cancelled && data && Array.isArray(data.properties) && data.properties.length > 0) {
+          setListings(data.properties);
+        } else if (!cancelled) {
+          setListings(loadListings());
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setListings(loadListings());
+      });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   const filteredListings = listings.filter(l => {
