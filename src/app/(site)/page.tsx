@@ -156,6 +156,36 @@ export default async function HomePage() {
         </section>
       )}
 
+      <section className="relative overflow-hidden bg-navy-950 py-16 lg:py-20">
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{ background: "radial-gradient(600px circle at 85% 20%, rgba(196,30,42,0.12), transparent 55%)" }}
+          aria-hidden
+        />
+        <div className="relative mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-8 px-6 lg:flex-row lg:px-8">
+          <Reveal className="text-center lg:text-left">
+            <p className="text-[11px] font-bold tracking-[0.35em] text-crimson-400 uppercase">
+              Verified Listings
+            </p>
+            <h2 className="font-display mt-3 text-3xl font-bold text-white md:text-4xl">
+              Find Your <span className="text-gradient-crimson">Dream Property</span>
+            </h2>
+            <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/60">
+              Legally verified houses, apartments and land across Chennai — updated live from our listings desk.
+            </p>
+          </Reveal>
+          <Reveal delay={0.15} className="shrink-0">
+            <Link
+              href="/real-estate"
+              className="group inline-flex items-center gap-3 bg-crimson-500 px-9 py-4 text-[12px] font-bold tracking-[0.22em] text-white uppercase transition-all duration-500 hover:bg-crimson-400 hover:shadow-crimson-lg"
+            >
+              Browse Properties
+              <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </Link>
+          </Reveal>
+        </div>
+      </section>
+
       <CTASection />
     </>
   );
