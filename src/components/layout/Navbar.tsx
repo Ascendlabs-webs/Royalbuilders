@@ -117,7 +117,7 @@ export default function Navbar() {
               </span>
             </Link>
 
-            <ul className="hidden items-center gap-1 lg:flex">
+            <ul className="hidden items-center gap-0.5 xl:flex">
               {NAV_LINKS.map((link) =>
                 link.mega ? (
                   <li
@@ -128,7 +128,7 @@ export default function Navbar() {
                   >
                     <button
                       className={cn(
-                        "flex items-center gap-1.5 px-4 py-6 font-body text-[13px] font-semibold tracking-[0.15em] uppercase transition-colors",
+                        "flex items-center gap-1.5 px-3 py-6 font-body text-[12.5px] font-semibold tracking-[0.12em] whitespace-nowrap uppercase transition-colors",
                         megaOpen ? "text-crimson-400" : "text-white/85 hover:text-crimson-400"
                       )}
                       aria-expanded={megaOpen}
@@ -157,7 +157,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       className={cn(
-                        "relative px-4 py-6 font-body text-[13px] font-semibold tracking-[0.15em] uppercase transition-colors",
+                        "relative px-3 py-6 font-body text-[12.5px] font-semibold tracking-[0.12em] whitespace-nowrap uppercase transition-colors",
                         pathname === link.href ? "text-crimson-400" : "text-white/85 hover:text-crimson-400"
                       )}
                     >
@@ -168,7 +168,7 @@ export default function Navbar() {
               )}
             </ul>
 
-            <div className="hidden items-center gap-4 lg:flex">
+            <div className="hidden items-center gap-3 xl:flex">
               <a
                 href={PHONE_HREF}
                 className="flex items-center gap-2 border border-crimson-500/50 px-4 py-2.5 text-xs font-semibold tracking-[0.15em] text-crimson-400 uppercase transition-all duration-300 hover:bg-crimson-500 hover:text-navy-950"
@@ -184,7 +184,7 @@ export default function Navbar() {
             </div>
 
             <button
-              className="rounded p-2 text-white lg:hidden"
+              className="rounded p-2 text-white xl:hidden"
               onClick={() => setMobileOpen((v) => !v)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
@@ -251,7 +251,7 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            className="fixed inset-0 z-[85] lg:hidden"
+            className="fixed inset-0 z-[85] xl:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
