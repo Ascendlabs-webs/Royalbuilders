@@ -29,6 +29,8 @@ export default function RealEstatePage() {
         image="/images/hero-land.jpg"
       />
 
+      <RealEstateListings />
+
       <section className="bg-white py-24 lg:py-32">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-8">
           <SectionHeading
@@ -70,8 +72,6 @@ export default function RealEstatePage() {
           </div>
         </div>
       </section>
-
-      <RealEstateListings />
 
       <section className="relative overflow-hidden bg-navy-950 py-24 lg:py-32">
         <div
