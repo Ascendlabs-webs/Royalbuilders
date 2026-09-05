@@ -18,6 +18,13 @@ export type CmsProperty = {
   fullAddress?: string;
   pricePerSqft?: number;
   sellingPoints?: string[];
+  totalArea?: number;
+  bedrooms?: number;
+  bathrooms?: number;
+  facing?: string;
+  legal?: Record<string, boolean>;
+  gallery?: string[];
+  mapLink?: string;
 };
 
 export type CmsPost = {
@@ -64,7 +71,14 @@ const PROPERTY_PROJECTION = groq`{
   "photo": coalesce(photo.asset->url, photoUrl),
   fullAddress,
   pricePerSqft,
-  sellingPoints
+  sellingPoints,
+  totalArea,
+  bedrooms,
+  bathrooms,
+  facing,
+  legal,
+  "gallery": gallery[].asset->url,
+  mapLink
 }`;
 
 export const PROPERTIES_QUERY = groq`*[_type == "property" && status != "draft"] | order(createdDate desc) ${PROPERTY_PROJECTION}`;
@@ -141,6 +155,26 @@ export async function getAllPropertiesForCrm(): Promise<ListingProperty[]> {
 
 export async function getPosts(): Promise<CmsPost[]> {
   return (await safeFetch<CmsPost[]>(POSTS_QUERY)) ?? [];
+}
+
+/** Full detail for one property — fresh, with static fallback. */
+export async function getPropertyById(id: string): Promise<CmsProperty | null> {
+  const decoded = decodeURIComponent(id);
+  const row = await safeFetch<CmsProperty>(PROPERTY_BY_ID_QUERY, { id: decoded }, true);
+  if (row) return row;
+  const fb = DEFAULT_LISTINGS.find((p) => p.id.toLowerCase() === decoded.toLowerCase());
+  if (!fb) return null;
+  return {
+    _id: fb.id,
+    propertyId: fb.id,
+    title: fb.title,
+    type: fb.type,
+    location: fb.location,
+    price: fb.price,
+    status: fb.status,
+    createdDate: fb.createdDate,
+    photo: fb.photo,
+  };
 }
 
 export async function getPostBySlug(slug: string): Promise<CmsPost | null> {

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { DEFAULT_LISTINGS, type ListingProperty } from '@/data/site-data';
 import { MapPin, Tag, Search } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
@@ -129,7 +130,10 @@ export default function RealEstateListings() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filteredListings.map((listing) => (
               <Reveal key={listing.id}>
-                <div className="group overflow-hidden border border-navy-900/10 bg-white transition-all duration-500 hover:border-crimson-500/50 hover:shadow-crimson">
+                <Link
+                  href={`/real-estate/${encodeURIComponent(listing.id)}`}
+                  className="group block overflow-hidden border border-navy-900/10 bg-white transition-all duration-500 hover:border-crimson-500/50 hover:shadow-crimson"
+                >
                   <div className="relative h-56 overflow-hidden">
                     <img
                       src={listing.photo}
@@ -160,9 +164,12 @@ export default function RealEstateListings() {
                         {formatPrice(listing.price)}
                       </p>
                       <p className="mt-1 text-xs text-graphite">ID: {listing.id}</p>
+                      <p className="mt-3 text-[11px] font-bold tracking-[0.25em] text-crimson-600 uppercase">
+                        View Details →
+                      </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               </Reveal>
             ))}
           </div>
