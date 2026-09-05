@@ -74,6 +74,7 @@ export default function CrmPage() {
   const [sellingPoints, setSellingPoints] = useState<string[]>([]);
   const [previewMainImg, setPreviewMainImg] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Refs for file inputs
   const mainFileRef = useRef<HTMLInputElement | null>(null);
@@ -106,6 +107,7 @@ export default function CrmPage() {
   // Navigation
   const navigateTo = (page: 'properties' | 'add-property') => {
     setActivePage(page);
+    setSidebarOpen(false);
     if (page === 'properties') resetForm();
   };
 
@@ -242,11 +244,13 @@ export default function CrmPage() {
   return (
     <>
       {/* Sidebar (you could replace this with your site's layout component) */}
-      <aside className="sidebar">
+      {sidebarOpen && <div className="sidebar-backdrop" onClick={() => setSidebarOpen(false)} aria-hidden />}
+      <aside className={`sidebar${sidebarOpen ? ' open' : ''}`}>
         <div className="sidebar-header">
           <h2>Royal Builders</h2>
+          <button className="sidebar-close" onClick={() => setSidebarOpen(false)} aria-label="Close menu">✕</button>
         </div>
-        <nav className="sidebar-nav">
+        <nav className="sidebar-nav" onClick={() => setSidebarOpen(false)}>
           <Link href="/" className={`nav-item ${activePage === 'dashboard' ? 'active' : ''}`}>
             Dashboard
           </Link>
@@ -282,6 +286,11 @@ export default function CrmPage() {
 
       <main className="main-content">
         <header className="app-header">
+          <button className="crm-menu-btn" onClick={() => setSidebarOpen(true)} aria-label="Open menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          </button>
           <div className="header-left">
             <h1>Royal Builders CRM</h1>
           </div>
@@ -299,7 +308,7 @@ export default function CrmPage() {
           </div>
         </header>
 
-        <section className="page-content" style={{ padding: '2rem', minHeight: `calc(100vh - 70px)` }}>
+        <section className="page-content">
           {/* Properties Page */}
           {activePage === 'properties' && (
             <>

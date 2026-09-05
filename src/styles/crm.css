@@ -841,8 +841,7 @@ body {
 }
 
 /* Optional: add a tiny style for invalid inputs */
-.is-invalid {
-    border-color: #ef4444 !important;
+.is-invalid {    border-color: #ef4444 !important;
     box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
 }
 .remove-btn {
@@ -861,4 +860,176 @@ body {
 }
 .remove-btn:hover {
     background: #dc2626;
+}
+
+/* Hamburger + drawer (mobile only) */
+.crm-menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex: none;
+    background: transparent;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-sm);
+    color: var(--navy-900);
+    cursor: pointer;
+}
+
+.sidebar-close {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: 1px solid var(--navy-700);
+    border-radius: var(--border-radius-sm);
+    color: var(--white);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.sidebar-backdrop {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Off-canvas drawer */
+    .sidebar {
+        width: min(280px, 85vw);
+        transform: translateX(-105%);
+        transition: transform 0.3s ease;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-header {
+        position: relative;
+    }
+
+    .sidebar-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+
+    .crm-menu-btn {
+        display: flex;
+    }
+
+    /* Two-row header: [menu title user] + full-width search */
+    .app-header {
+        height: auto;
+        min-height: var(--header-height);
+        flex-wrap: wrap;
+        gap: 0.5rem 0.75rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .header-left h1 {
+        font-size: 1.1rem;
+    }
+
+    .header-center {
+        order: 3;
+        flex: 1 1 100%;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .username {
+        display: none;
+    }
+
+    .user-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Page + cards */
+    .page-content {
+        padding: 1rem;
+    }
+
+    .page-header {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .page-header h2 {
+        font-size: 1.35rem;
+    }
+
+    .page-header .btn-primary {
+        width: 100%;
+        padding: 0.85rem 1rem;
+    }
+
+    .search-input {
+        min-width: 0;
+    }
+
+    .filter {
+        min-width: 0;
+        flex: 1 1 45%;
+    }
+
+    .property-actions {
+        flex-wrap: wrap;
+    }
+
+    .property-actions button {
+        flex: 1 1 40%;
+    }
+
+    /* Add-property form */
+    .form-steps {
+        gap: 0.5rem;
+    }
+
+    .form-step {
+        flex: 1 0 30%;
+        padding: 0.6rem 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .property-preview-panel {
+        max-width: none;
+    }
+
+    .form-actions {
+        flex-wrap: wrap;
+        justify-content: stretch;
+    }
+
+    .form-actions button {
+        flex: 1 1 45%;
+        padding: 0.85rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .upload-area {
+        padding: 1.25rem 1rem;
+    }
+
+    .utils-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
