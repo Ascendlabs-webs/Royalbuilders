@@ -100,9 +100,9 @@ export default async function PropertyDetailPage({ params }: { params: Promise<{
             {/* Main column */}
             <div className="lg:col-span-2">
               <Reveal>
-                <div className="overflow-hidden border border-navy-900/10 bg-white">
+                <div className="flex items-center justify-center overflow-hidden border border-navy-900/10 bg-navy-950">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={p.photo} alt={p.title} className="h-80 w-full object-cover md:h-[480px]" />
+                  <img src={p.photo} alt={p.title} className="max-h-[70vh] w-auto max-w-full object-contain" />
                 </div>
               </Reveal>
 
