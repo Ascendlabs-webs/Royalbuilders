@@ -22,6 +22,7 @@ export type CmsProperty = {
   bedrooms?: number;
   bathrooms?: number;
   floors?: string;
+  floorPlans?: { floor: string; config: string; area?: number }[];
   facing?: string;
   legal?: Record<string, boolean>;
   gallery?: string[];
@@ -77,6 +78,7 @@ const PROPERTY_PROJECTION = groq`{
   bedrooms,
   bathrooms,
   floors,
+  floorPlans[]{ floor, config, area },
   facing,
   legal,
   "gallery": gallery[].asset->url,

@@ -147,6 +147,25 @@ export default async function PropertyDetailPage({ params }: { params: Promise<{
                 </div>
               )}
 
+              {p.floorPlans && p.floorPlans.length > 0 && (
+                <div className="mt-10">
+                  <SectionHeading align="left" kicker="Layout" title={<>Floor-wise <span className="text-gradient-crimson">Layout</span></>} />
+                  <div className="overflow-hidden border border-navy-900/10 bg-white">
+                    {p.floorPlans.map((f, i) => (
+                      <Reveal key={i} delay={0.04 * i}>
+                        <div className={`flex items-center justify-between gap-4 px-5 py-4 ${i > 0 ? "border-t border-navy-900/10" : ""}`}>
+                          <span className="text-[11px] font-bold tracking-[0.2em] text-slate-soft uppercase">{f.floor}</span>
+                          <span className="font-display text-right font-bold text-navy-900">
+                            {f.config}
+                            {f.area ? <span className="ml-2 text-sm font-normal text-graphite">· {Number(f.area).toLocaleString("en-IN")} Sq.Ft</span> : null}
+                          </span>
+                        </div>
+                      </Reveal>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {p.sellingPoints && p.sellingPoints.length > 0 && (
                 <div className="mt-10">
                   <SectionHeading align="left" kicker="Highlights" title={<>Why This <span className="text-gradient-crimson">Property</span></>} />

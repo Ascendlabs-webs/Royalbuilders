@@ -39,6 +39,20 @@ export default defineType({
     defineField({ name: "bedrooms", title: "Bedrooms", type: "number" }),
     defineField({ name: "bathrooms", title: "Bathrooms", type: "number" }),
     defineField({ name: "floors", title: "Floors (e.g. G+1, G+2)", type: "string" }),
+    defineField({
+      name: "floorPlans",
+      title: "Floor-wise Layout (e.g. Floor 1 → 1BHK)",
+      type: "array",
+      of: [{
+        type: "object",
+        fields: [
+          { name: "floor", type: "string", title: "Floor (e.g. Ground Floor, Floor 1)" },
+          { name: "config", type: "string", title: "Configuration (e.g. 1BHK, 3BHK, Parking)" },
+          { name: "area", type: "number", title: "Area (Sq.Ft, optional)" },
+        ],
+        preview: { select: { title: "floor", subtitle: "config" } },
+      }],
+    }),
     defineField({ name: "facing", title: "Facing", type: "string" }),
     defineField({ name: "sellingPoints", title: "Selling Points", type: "array", of: [{ type: "string" }] }),
     defineField({
