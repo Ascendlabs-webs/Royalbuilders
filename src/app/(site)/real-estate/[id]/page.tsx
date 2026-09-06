@@ -202,9 +202,9 @@ export default async function PropertyDetailPage({ params }: { params: Promise<{
                         href={p.mapLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 px-6 py-3 text-[11px] font-bold tracking-[0.2em] text-white/60 uppercase hover:text-white"
+                        className="flex items-center justify-center gap-2 border-2 border-crimson-500 bg-crimson-500/10 px-6 py-3.5 text-[12px] font-bold tracking-[0.2em] text-crimson-400 uppercase shadow-crimson transition-all hover:bg-crimson-500 hover:text-white"
                       >
-                        <MapPin size={14} /> View on Map
+                        <MapPin size={16} /> View on Map
                       </a>
                     )}
                   </div>
