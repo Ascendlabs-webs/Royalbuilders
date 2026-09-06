@@ -38,6 +38,7 @@ export default defineType({
     defineField({ name: "totalArea", title: "Total Area (Sq.Ft)", type: "number" }),
     defineField({ name: "bedrooms", title: "Bedrooms", type: "number" }),
     defineField({ name: "bathrooms", title: "Bathrooms", type: "number" }),
+    defineField({ name: "floors", title: "Floors (e.g. G+1, G+2)", type: "string" }),
     defineField({ name: "facing", title: "Facing", type: "string" }),
     defineField({ name: "sellingPoints", title: "Selling Points", type: "array", of: [{ type: "string" }] }),
     defineField({

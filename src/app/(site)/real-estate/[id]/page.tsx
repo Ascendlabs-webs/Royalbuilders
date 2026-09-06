@@ -59,6 +59,7 @@ export default async function PropertyDetailPage({ params }: { params: Promise<{
     ...(p.totalArea ? [{ label: "Total Area", value: `${Number(p.totalArea).toLocaleString("en-IN")} Sq.Ft` }] : []),
     ...(p.bedrooms != null ? [{ label: "Bedrooms", value: String(p.bedrooms) }] : []),
     ...(p.bathrooms != null ? [{ label: "Bathrooms", value: String(p.bathrooms) }] : []),
+    ...(p.floors ? [{ label: "Floors", value: p.floors }] : []),
     ...(p.facing ? [{ label: "Facing", value: p.facing }] : []),
     ...(p.pricePerSqft ? [{ label: "Price / Sq.Ft", value: `₹${Number(p.pricePerSqft).toLocaleString("en-IN")}` }] : []),
     { label: "Property ID", value: p.propertyId },
