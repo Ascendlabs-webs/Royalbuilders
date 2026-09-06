@@ -134,12 +134,12 @@ export default function RealEstateListings() {
                   href={`/real-estate/${encodeURIComponent(listing.id)}`}
                   className="group block overflow-hidden border border-navy-900/10 bg-white transition-all duration-500 hover:border-crimson-500/50 hover:shadow-crimson"
                 >
-                  <div className="relative h-56 overflow-hidden">
+                  <div className="relative flex h-72 items-center justify-center overflow-hidden bg-alabaster">
                     <img
                       src={listing.photo}
                       alt={listing.title}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute top-4 left-4">
                       <span className="inline-flex items-center gap-1.5 bg-crimson-500 px-3 py-1.5 text-[10px] font-bold tracking-[0.2em] text-white uppercase">
